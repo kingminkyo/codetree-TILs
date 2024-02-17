@@ -1,4 +1,4 @@
-a, b = input().split()
+a, b = int(input().split())
 
 if a>=b:
     real = a; # 12, 18인 경우 18 
