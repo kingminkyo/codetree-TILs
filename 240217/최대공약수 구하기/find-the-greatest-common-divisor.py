@@ -1,5 +1,4 @@
-a = input()
-b = input()
+a, b = input().split()
 
 if a>b:
     real = a;
