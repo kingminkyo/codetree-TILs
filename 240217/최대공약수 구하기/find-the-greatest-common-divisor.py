@@ -1,5 +1,5 @@
-input(a)
-input(b)
+a = input()
+b = input()
 
 if a>b:
     real = a;
