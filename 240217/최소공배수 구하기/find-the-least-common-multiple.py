@@ -1,0 +1,22 @@
+a, b = map(int, input().split())
+
+
+def gcd(x, y):
+    while (y):
+        x, y = y, x%y
+    return x
+result = a*b//gcd(a,b)
+
+print (result)
+
+# a, b = map(int, input().split())
+
+# def gcd(x, y):
+#     while y:
+#         x, y = y, x % y
+#     return x
+
+# def lcm(x, y):
+#     return x * y // gcd(x, y)
+
+# print(lcm(a, b))
