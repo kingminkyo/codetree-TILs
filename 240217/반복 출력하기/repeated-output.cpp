@@ -4,7 +4,7 @@ using namespace std;
 
 void print_n_lines(int n){
     for(int i = 0; i<n; i++){
-        cout << "12345^&*()_";
+        cout << "12345^&*()_" << endl;
     }
 }
 
@@ -14,6 +14,6 @@ int main() {
 
     cin >> input;
     print_n_lines(input);
-    
+
     return 0;
 }
