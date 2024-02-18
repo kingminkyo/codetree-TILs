@@ -1,8 +1,11 @@
 def yes369(n):
-    if n//10 == 3 or n//10 == 6 or  n//10 == 9 or n%10 == 3 or n%10 == 6 or n%10 == 9 :
-        return True
-    else:
-        return False
+    while (n>0):
+        if n % 10 == 3 or n % 10 == 6  or n % 10 == 9 :
+            return True
+        
+        n = n // 10
+
+    return False
 
 def basu3(n):
     return n % 3 == 0
