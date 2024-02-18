@@ -8,4 +8,4 @@ def yes(n):
 if yes(a):
     print("Yes")
 else:
-    print("False")
+    print("No")
