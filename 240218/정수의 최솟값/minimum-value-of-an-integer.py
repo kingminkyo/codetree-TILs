@@ -1,12 +1,14 @@
 a, b, c = tuple(map(int, input().split()))
 
 
-def func(*arg):
-    result = 0 
-    for i in arg:
-        if result > i:
-            result = i 
-    
-    return result 
+def get_min(a, b, c):
+    min_val = a
+    if min_val > b:
+        min_val = b
+    if min_val > c:
+        min_val = c
 
-print(func(a, b, c))
+    return min_val
+
+
+print(get_min(a, b, c))
