@@ -5,11 +5,12 @@ b = list(map(int, input().split()))
 
 def isSq(a, b, n1, n2):
     for i in range (n1):
+        result = 0
         for j in range (n2):
             if a[i+j] == b[j]:
-                
-                print(b[j])
-                return True
+                result += 1
+                if result == n2:
+                    return True
         
     return False
 
