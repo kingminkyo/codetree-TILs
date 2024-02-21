@@ -4,7 +4,7 @@ def sosu(x):
     if x <= 0:
         return False
     else:
-        for i in range (2, x):
+        for i in range (2, x+1):
             if x % i == 0:
                 return False
 
