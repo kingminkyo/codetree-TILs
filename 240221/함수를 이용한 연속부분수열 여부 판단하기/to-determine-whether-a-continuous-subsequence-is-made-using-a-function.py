@@ -4,6 +4,7 @@ a = list(map(int, input().split()))
 b = list(map(int, input().split()))
 
 def isSq(a, b, n1, n2):
+    result = 0
     for i in range (n1):
         result = 0
         for j in range (n2):
