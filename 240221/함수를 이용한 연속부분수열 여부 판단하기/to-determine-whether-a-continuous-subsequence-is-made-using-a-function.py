@@ -8,7 +8,7 @@ def isSq(a, b, n1, n2):
         for j in range (n2):
             if a[i+j] == b[j]:
                 
-                print(b)
+                print(i)
                 return True
         
     return False
