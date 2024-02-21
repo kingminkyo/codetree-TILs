@@ -12,7 +12,7 @@ def sosu(x):
 
 result = 0 
 
-for i in range (a, b):
+for i in range (a, b+1):
     if sosu(i):
         if (i //10 + i % 10 ) % 2 == 0:
             result += 1 
