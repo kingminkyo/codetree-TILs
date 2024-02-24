@@ -11,7 +11,7 @@ int MaxValue(int a){
     if (a==0)
         return arr[0];
 
-    return max(MaxValue(a-1), arr[a])
+    return max(MaxValue(a-1), arr[a]);
 }
 
 
