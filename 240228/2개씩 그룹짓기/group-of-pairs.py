@@ -18,9 +18,9 @@ for i in range(n):
 for i in range(n+1, n*2):
     # print(i)
     if i % 2 == 0 or i == 0:
-        group_a.append(arr[i])
+        group_a.append(arr[n-i])
     else:
-        group_b.append(arr[n-i])
+        group_b.append(arr[i])
 
 result = 0
 for i in range(n):
