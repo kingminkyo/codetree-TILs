@@ -21,4 +21,4 @@ for i in range(n):
     result += group_b[i]
 
 
-print(result)
+print(group_b)
