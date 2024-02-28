@@ -23,7 +23,7 @@ for i in range(n, n*2):
         group_a.append(arr[n-i])
 
 result = 0
-for i in range(n):
+for i in range(len(group_b)):
     result += group_b[i]
 
 
