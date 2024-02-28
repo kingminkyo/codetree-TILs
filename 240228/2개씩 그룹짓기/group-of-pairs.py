@@ -20,7 +20,7 @@ for i in range(n, n*2):
     if i % 2 == 0 or i == 0:
         group_b.append(arr[i])
     else:
-        group_a.append(arr[n-1])
+        group_a.append(arr[n-i])
 
 result = 0
 for i in range(n):
