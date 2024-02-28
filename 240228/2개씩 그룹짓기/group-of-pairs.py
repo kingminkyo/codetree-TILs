@@ -26,5 +26,7 @@ result = 0
 for i in range(len(group_b)):
     result += group_b[i]
 
-
+if n == 1:
+    for i in range(2):
+        result += arr[i]
 print(result)
