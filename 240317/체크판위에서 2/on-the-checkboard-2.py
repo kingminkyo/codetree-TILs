@@ -15,5 +15,6 @@ for i in range (1, a):
                 for l in range (j+1, b-1):
                     if rec[k][l] == first:
                         count +=1 
-
+if rec[0][0] == rec[a-1][b-1]:
+    count = 0
 print(count)
