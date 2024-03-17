@@ -14,7 +14,7 @@ for i in range (1, n-1): # 1~2
     for j in range(1, n): # 1~3 
         if j == i:
             continue
-        dist += (abs(arr[j][0]-x1) + abs(arr[j][1]-y1))    
+        dist += abs(x1 - (arr[j][0])) + abs(y1 - arr[j][1])
         x1 = abs(arr[j][0])
         y1 = abs(arr[j][1])
         
