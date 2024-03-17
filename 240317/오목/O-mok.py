@@ -7,7 +7,7 @@ win_color = 0
 x1 = 0
 x2 = 0
 
-for i in range(15):
+for i in range(19):
     for j in range(15):
         start = 0
 
