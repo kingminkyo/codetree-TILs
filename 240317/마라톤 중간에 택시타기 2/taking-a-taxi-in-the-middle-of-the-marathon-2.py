@@ -7,8 +7,8 @@ arr = [list(map(int, input().split())) for _ in range(n)]
 result = sys.maxsize
 dist = 0
 for i in range (1, n-1): # 1~2
-    x1 = 0
-    y1 = 0
+    x1 = arr[0][0]
+    y1 = arr[0][0]
     for j in range(1, n): # 1~3 
          
 
