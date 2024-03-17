@@ -34,5 +34,6 @@ for i in range(n):
                     # print (f"{arr[i]} {arr[j]} {arr[k]}")
                     ans = max(ans,no)
 
-
+if ans < 0:
+    ans = -1
 print(ans)
