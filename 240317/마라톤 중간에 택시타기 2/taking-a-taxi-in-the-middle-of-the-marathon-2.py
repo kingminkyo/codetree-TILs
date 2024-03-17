@@ -1,0 +1,28 @@
+import sys
+
+n = int(input())
+
+arr = [list(map(int, input().split())) for _ in range(n)]
+
+# print(arr)
+
+result = sys.maxsize
+dist = 0
+for i in range (1, n-1): # 1~2
+    x1 = 0
+    y1 = 0
+    for j in range(1, n): # 1~3 
+         
+
+        if j != i:
+            dist += (abs(arr[j][0]-x1) + abs(arr[j][1]-y1))    
+            x1 = abs(arr[j][0])
+            y1 = abs(arr[j][1])
+        
+        # print(x1, y1)
+
+    if dist < result:
+        result = dist
+    dist = 0
+
+print(result)
