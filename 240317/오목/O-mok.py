@@ -11,7 +11,7 @@ for i in range(19):
     for j in range(19):
         start = 0
 
-        if arr[i][j] is not 0:
+        if arr[i][j] != 0:
             # print("hello")
             start = arr[i][j] 
             win = 0
