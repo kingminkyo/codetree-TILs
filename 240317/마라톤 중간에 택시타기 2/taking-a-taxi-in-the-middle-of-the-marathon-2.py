@@ -20,9 +20,9 @@ for i in range (1, n-1): # 1~2
         
         # print(x1, y1)
 
-    if dist <= result:
-        result = dist
-    # ans = min(dist, result)
+    # if dist <= result:
+    #     result = dist
+    result = min(dist, result)
 
     
 
