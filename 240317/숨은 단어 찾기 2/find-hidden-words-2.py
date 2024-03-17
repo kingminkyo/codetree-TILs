@@ -3,8 +3,8 @@ arr = [input() for _ in range(n)]
 
 count = 0 
 
-for i in range(4):
-    for j in range(6):
+for i in range(n):
+    for j in range(m):
         if arr[i][j] =="L":
             if j < n-3 and arr[i][j+1] == "E" and arr[i][j+2] == "E" : count+=1 ; 
             if i < n-3 and j < n-3 and arr[i+1][j+1] == "E" and arr[i+2][j+2] == "E" : count+=1; 
