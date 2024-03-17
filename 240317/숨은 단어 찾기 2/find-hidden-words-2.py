@@ -20,16 +20,8 @@ for i in range(n):
                 if j >= 2 and arr[i][j-1] == "E" and arr[i][j-2] == "E" : count+=1 ; 
                 if j < n-3 and arr[i][j+1] == "E" and arr[i][j+2] == "E" : count+=1 ; 
                 
+        
 
-
-
-
-
-
-
-
-
-            
 
 
 print(count)
