@@ -50,7 +50,7 @@ for i in range(19):
                 elif win == 12 :
                     x1, x2 = i+3, j+1 
                 else:
-                    x1, x2 = i+3, j-3
+                    x1, x2 = i+3, j+3
                 break
             
         if win >= 1:
