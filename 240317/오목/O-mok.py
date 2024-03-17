@@ -38,7 +38,7 @@ for i in range(19):
                 for k in range(1, 5):
                     if arr[i-1][j-1] == start:
                         win += 4
-                if win is not 12:
+                if win is not 16:
                     win = 0
                 
             if win >= 1:
@@ -47,8 +47,10 @@ for i in range(19):
                     x1, x2 = i+1, j+3 
                 elif win == 8:
                     x1, x2 = i+3, j+3
-                else :
+                elif win == 12 :
                     x1, x2 = i+3, j+1 
+                else:
+                    x1, x2 = i-3, j+3
                 break
             
         if win >= 1:
