@@ -52,3 +52,6 @@ for i in range(19):
 if win >=1:
     print(win_color)
     print(f"{x1} {x2}")
+        
+else:
+    print("0")
