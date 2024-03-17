@@ -3,8 +3,8 @@ arr = input()
 dep = len(arr)
 
 count = 0
-print(arr)
-print(dep)
+# print(arr)
+# print(dep)
 for i in range(dep):
     if arr[i] == "C":
         for j in range(i+1, dep):
