@@ -39,7 +39,7 @@ for i in range(n):
     for j in range(n):
 
         if can_go(i, j):
-            count= 1
+            count= 0
             visited[i][j] = 1
             dfs(i, j)
             if comp is not count:
