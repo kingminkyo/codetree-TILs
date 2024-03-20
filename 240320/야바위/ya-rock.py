@@ -21,6 +21,6 @@ for i in range(3):
         # print(score)
 
     result = max(score, result)
-    abc[0], abc[1], abc[2] = 0
+    abc[0], abc[1], abc[2] = 0, 0, 0
 
 print(result)
