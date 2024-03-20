@@ -11,7 +11,7 @@ visited = [
 ]
 
 def in_range(x, y):
-    if x >= 0 and x < n and y >= 0 and y < m:
+    if x >= 0 and x < m and y >= 0 and y < n:
         return True
     
     return False
