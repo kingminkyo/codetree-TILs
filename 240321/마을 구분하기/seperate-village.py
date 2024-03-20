@@ -34,6 +34,13 @@ def dfs(x, y):
             dfs(new_x, new_y)
 
 result = []
+# for i in range(n):
+#     for j in range(n):
+#             dfs(i, j)
+#             if comp is not count:
+#                 result.append(count)
+#                 count = 0
+            
 for i in range(n):
     for j in range(n):
         if can_go(i, j):
@@ -42,7 +49,6 @@ for i in range(n):
 
             dfs(i, j)
             result.append(count)
-
 # for i in range(n):
 #     print(visited[i])
 
