@@ -38,7 +38,7 @@ comp = 0
 for i in range(n):
     for j in range(n):
 
-                
+        if can_go(i, j):
                 
             dfs(i, j)
             if comp is not count:
