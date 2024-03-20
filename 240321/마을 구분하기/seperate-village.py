@@ -32,15 +32,16 @@ def dfs(x, y):
             count += 1 
             visited[new_x][new_y] = 1
             dfs(new_x, new_y)
-comp = 0
+
 result = []
 for i in range(n):
     for j in range(n):
-        dfs(i, j)
-        if comp is not count:
+        if can_go(i, j):
+            visited[i][j] = 1
+            count = 1
+
+            dfs(i, j)
             result.append(count)
-            count = 0
-        
 
 # for i in range(n):
 #     print(visited[i])
