@@ -4,7 +4,6 @@ n = int(input())
 arr = list(map(int, input().split()))
 
 min_score = sys.maxsize
-
 result = 0
 
 def score(removed_idx):
@@ -28,10 +27,11 @@ for i in range(n):
     arr[i] *= 2
     
     for j in range(n):
+        # print(score(j))
         min_score = min(min_score, score(j))
 
 
     
     arr[i] //= 2
 
-print(result)
+print(min_score)
