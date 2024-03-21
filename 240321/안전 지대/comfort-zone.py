@@ -54,7 +54,7 @@ def dfs(x, y, comp):
     # print()
 # result 
 num, result_count = 0, 0
-for comp in range(0, max_int):
+for comp in range(0, max_int+1):
     # print(comp)
     temp = 0
     result = 0
