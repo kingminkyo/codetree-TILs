@@ -64,7 +64,14 @@ for i in range(k):
 
 # print(diff)
 
-print(count)
+ans = sum([
+    1
+    for i in range(n)
+    for j in range(n)
+    if visited[i][j]
+])
+
+print(ans)
 # for i in range(k):
 #     q.append((1,1))
 #     bfs()
