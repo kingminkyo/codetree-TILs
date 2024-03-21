@@ -77,4 +77,4 @@ for comp in range(0, max_int):
         for j in range(m):
             visited[i][j] = 0
 
-print(f"{num} {result_count}")
+print(f"{result_count} {num}")
