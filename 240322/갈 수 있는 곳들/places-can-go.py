@@ -57,9 +57,11 @@ def bfs():
                 push(new_x, new_y)    
 
 
+for i in range(k):
+    push(diff[i][0], diff[i][1])
+    bfs()
 
-push(0,0)
-bfs()
+
 print(count)
 # for i in range(k):
 #     q.append((1,1))
