@@ -58,7 +58,7 @@ def bfs():
 
 
 for i in range(k):
-    push(diff[i][0], diff[i][1])
+    push(diff[i][0]-1, diff[i][1]-1)
     bfs()
 
 
