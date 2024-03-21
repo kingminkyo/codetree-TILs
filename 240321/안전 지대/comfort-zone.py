@@ -44,9 +44,9 @@ def dfs(x, y, comp):
             count += 1 
             visited[new_x][new_y] = 1
             dfs(new_x, new_y, comp)
-            # print(count)
-            # for k in range(n):
-            #     print(visited[k])   
+            print(count)
+            for k in range(n):
+                print(visited[k])   
             
             
 
