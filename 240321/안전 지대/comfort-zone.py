@@ -33,7 +33,7 @@ def can_go(x, y, comp):
 
 count = 0
 def dfs(x, y, comp):
-    global count
+    # global count
     dxs, dys = [1, 0 ,-1, 0] , [0, -1, 0, 1]
 
     
@@ -48,13 +48,29 @@ def dfs(x, y, comp):
             # for k in range(n):
             #     print(visited[k])   
             
-            
+# new_n = 0
+# def new_dfs(n):
+#     global new_n
+
+#     new_n = 0
+
+#     for i in range(n):
+#         for j in range(m):
+#             if can_go(i, j, n):
+#                 visited[i][j] = 1
+#                 new_n += 1
+#                 dfs(i, j, n)
 
 
-    # print()
-# result 
+
+
+
+
+
+#     # print()
+# # result 
 num, result_count = 0, 0
-for comp in range(0, max_int+1):
+for comp in range(0, 101):
     # print(comp)
     temp = 0
     result = 0
