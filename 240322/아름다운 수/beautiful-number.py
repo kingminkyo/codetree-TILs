@@ -21,7 +21,7 @@ def check_double():
                 double_stack.append(result[i])
 
 
-        elif result[i] >= 2 and  double_stack[len(double_stack)-1] != result[i] or result[i-1] != result[i]:
+        elif result[i] >= 2 and  (double_stack[len(double_stack)-1] != result[i] or result[i-1] != result[i]):
             for j in range(result[i]-1):
                 double_stack.append(result[i])
 
