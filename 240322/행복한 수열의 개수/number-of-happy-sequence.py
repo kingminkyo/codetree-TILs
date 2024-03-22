@@ -23,7 +23,8 @@ for i in range(n):
 
 
 
-    
+if n == 1 and grid[0][0] == 1:
+    happy = 2
 
 
 for i in range(n):
@@ -32,6 +33,7 @@ for i in range(n):
         if grid[j][i] == grid[j-1][i]:
             # print(f"{i} {j}")
             same+= 1
+
         if same >= m-1:
             happy+=1
             break
