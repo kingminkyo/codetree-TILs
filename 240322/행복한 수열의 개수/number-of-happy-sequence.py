@@ -13,8 +13,14 @@ for i in range(n):
         if grid[i][j] == grid[i][j-1]:
             # print(f"{i} {j}")
             same+= 1
-    if same >= m-1:
-        happy+=1
+        
+        if same >= m-1:
+            happy+=1
+            break
+
+        if grid[i][j] != grid[i][j-1]:
+            same = 0
+
 
 
     
@@ -26,8 +32,12 @@ for i in range(n):
         if grid[j][i] == grid[j-1][i]:
             # print(f"{i} {j}")
             same+= 1
-    if same >= m-1:
-        happy+=1
+        if same >= m-1:
+            happy+=1
+            break
+
+        if grid[j][i] != grid[j-1][i]:
+            same = 0
 
     
 
