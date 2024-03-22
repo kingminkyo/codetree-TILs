@@ -1,5 +1,5 @@
 n = int(input())
-n = 4
+# n = 4
 result = []
 
 def print_bt():
@@ -29,7 +29,7 @@ def check_double():
             double_stack.pop()
         
         
-    print(double_stack)
+    # print(double_stack)
 
     if len(double_stack) == 0:
         double_stack = []
@@ -45,7 +45,7 @@ end = 0
 def find_bt(cnt):
     global end
     if cnt == n+1:
-        print_bt()
+        # print_bt()
         
         if check_double():
             end+=1
