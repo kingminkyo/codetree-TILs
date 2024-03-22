@@ -85,6 +85,8 @@ def is_beautiful():
                 return False
 
         i += result[i]
+
+    return True
 end = 0
 def find_bt(cnt):
     global end
