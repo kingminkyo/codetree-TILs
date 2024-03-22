@@ -1,0 +1,34 @@
+n, m = tuple(map(int, input().split()))
+
+grid = [
+    list(map(int, input().split()))
+    for _ in range(n)
+]
+
+happy = 0 
+
+for i in range(n):
+    same = 0
+    for j in range(1, n):
+        if grid[i][j] == grid[i][j-1]:
+            # print(f"{i} {j}")
+            same+= 1
+    if same >= m-1:
+        happy+=1
+
+
+    
+
+
+for i in range(n):
+    same = 0
+    for j in range(1, n):
+        if grid[j][i] == grid[j-1][i]:
+            # print(f"{i} {j}")
+            same+= 1
+    if same >= m-1:
+        happy+=1
+
+    
+
+print(happy)
