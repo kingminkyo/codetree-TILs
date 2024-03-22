@@ -1,5 +1,5 @@
 n = int(input())
-n = 4
+# n = 4
 result = []
 
 def print_bt():
