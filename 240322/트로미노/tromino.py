@@ -34,7 +34,7 @@ for x in range(n):
         for dx, dy in zip(dxs, dys):
             nx, ny = x+dx, y+dy
             if in_range(nx, ny):
-                comp = grid[x][y] + grid[nx][ny] + grid[x+dx//2][y+ny//2]
+                comp = grid[x][y] + grid[nx][ny] + grid[x+nx/2][y+ny/2]
                 result = max(result, comp)
 
 print(result)
