@@ -1,5 +1,5 @@
 n = int(input())
-n = 7
+# n = 7
 result = []
 
 def print_bt():
