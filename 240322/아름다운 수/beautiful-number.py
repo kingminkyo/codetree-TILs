@@ -44,15 +44,14 @@ def check_double():
 
 def is_beautiful():
     i = 0
-    for i in range(n):
+    for i in range(0, n, result[i]):
         if result[i] > n:
             return False
         for j in range(i, i + result[i]):
             if result[i] != result[j]:
                 return False
         
-        i+= result[i]
-
+        
     return True
 
 
