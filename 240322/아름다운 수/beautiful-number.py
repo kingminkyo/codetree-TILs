@@ -32,12 +32,7 @@ def check_double():
         
         
         elif len(double_stack) != 0 and result[i-1] == result[i] and result[i] != 1:
-            double_stack.pop()
-        
-        
-        
-        
-        
+            double_stack.pop()        
     # print(double_stack)
 
     if len(double_stack) == 0:
@@ -47,7 +42,18 @@ def check_double():
         double_stack = []
         return False
 
+def is_beautiful():
+    i = 0
+    for i in range(n):
+        if result[i] > n:
+            return False
+        for j in range(i, i + result[i]):
+            if result[i] != result[j]:
+                return False
+        
+        i+= result[i]
 
+    return True
 
 
 end = 0
@@ -56,7 +62,7 @@ def find_bt(cnt):
     if cnt == n+1:
         # print_bt()
         
-        if check_double():
+        if is_beautiful():
             # print_bt()
             # print(double_stack)
             end+=1
