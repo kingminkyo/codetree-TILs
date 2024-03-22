@@ -59,7 +59,7 @@ def is_beautiful():
     while i < n:
         # 만약 연속하여 해당 숫자만큼 나올 수 없다면
         # 아름다운 수가 아닙니다.
-        if i + result[i] - 1 >= n:
+        if i + result[i]  > n:
             return False
         # 연속하여 해당 숫자만큼 같은 숫자가 있는지 확인합니다.
         # 하나라도 다른 숫자가 있다면
