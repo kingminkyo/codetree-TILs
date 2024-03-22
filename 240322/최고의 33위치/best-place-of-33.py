@@ -9,8 +9,8 @@ result = 0
 
 def count_area(x, y):
     count = 0
-    for i in range(3):
-        for j in range(3):
+    for i in range(x, x+3):
+        for j in range(y, y+3):
             if grid[i][j] == 1:
                 count += 1
 
