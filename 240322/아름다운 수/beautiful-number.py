@@ -1,5 +1,5 @@
 n = int(input())
-# n = 7
+n = 7
 result = []
 
 def print_bt():
@@ -17,8 +17,12 @@ def check_double():
 
         # 2 4 2 를 가정하자 
         if len(double_stack) == 0 and result[i] >= 2 :
+            
             for j in range(result[i]-1):
                 double_stack.append(result[i])
+
+        elif result[i] >= 1 and len(double_stack) != 0 and double_stack[len(double_stack)-1] != result[i]:
+            break
 
 
         elif result[i] >= 2 and  (double_stack[len(double_stack)-1] != result[i] or result[i-1] != result[i]):
@@ -29,6 +33,8 @@ def check_double():
         
         elif len(double_stack) != 0 and result[i-1] == result[i] and result[i] != 1:
             double_stack.pop()
+        
+        
         
         
         
