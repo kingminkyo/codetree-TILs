@@ -17,9 +17,9 @@ for d in direct:
         c_dir += 1
 
     if c_dir >= 4:
-        d = 0
+        c_dir= 0
     elif c_dir <= -1:
-        d = 3
+        c_dir = 3
 
 
     
