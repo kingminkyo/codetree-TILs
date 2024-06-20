@@ -12,14 +12,11 @@ for d in direct:
         y += dy[c_dir]
 
     if d == "L":
-        c_dir -= 1
+        c_dir = (c_dir - 1 + 4) % 4
     if d == "R":
-        c_dir += 1
+        c_dir = (c_dir + 1) % 4
 
-    if c_dir >= 4:
-        c_dir= 0
-    elif c_dir <= -1:
-        c_dir = 3
+    
 
 
     
