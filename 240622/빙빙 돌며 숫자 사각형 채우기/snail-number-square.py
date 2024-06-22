@@ -1,71 +1,32 @@
-# n, m = tuple(map(int, input().split())) # 1 , 6 
+n, m = tuple(map(int, input().split())) # 1 , 6 
 
-# arr =[
-#     [0] * m
-#     for _ in range(n)
-# ]
-
-# arr[0][0] = 1
-
-# dx, dy =  [0, 1, 0, -1], [1, 0, -1, 0]
-
-# def in_range(x, y):
-#     return x>=0 and x<m and y>=0 and y<n
-
-# cnt = 0
-# x, y = 0, 0
-# dn = 0
-# for i in range(2, m*n +1):
-#     nx, ny = x+dx[dn], y+dy[dn]
-
-#     if not in_range(nx, ny) or arr[nx][ny] != 0:
-#         dn = (dn + 1) % 4
-
-#     x, y = x+dx[dn], y+dy[dn]
-    
-#     arr[x][y]=i
-
-
-# for i in range(n):
-#     for j in range(m):
-#         print(f"{arr[i][j]}", end=" ")
-#     print()
-
-
-n, m = tuple(map(int, input().split()))
-answer = [
+arr =[
     [0] * m
     for _ in range(n)
 ]
 
+arr[0][0] = 1
+
+dx, dy =  [0, 1, 0, -1], [1, 0, -1, 0]
 
 def in_range(x, y):
-    return 0 <= x and x < n and 0 <= y and y < m
+    return x>=0 and x<n and y>=0 and y<m
 
+cnt = 0
+x, y = 0, 0
+dn = 0
+for i in range(2, m*n +1):
+    nx, ny = x+dx[dn], y+dy[dn]
 
-dxs, dys = [0, 1, 0, -1], [1, 0, -1, 0]
-x, y = 0, 0           # 시작은 (0, 0) 입니다.
-dir_num = 0           # 0: 오른쪽, 1: 아래쪽, 2: 왼쪽, 3: 위쪽
+    if not in_range(nx, ny) or arr[nx][ny] != 0:
+        dn = (dn + 1) % 4
 
-# 처음 시작 위치에 초기값을 적습니다.
-answer[x][y] = 1
-
-# n*m번 진행합니다.
-for i in range(2, n * m + 1):
-    # 현재 방향 dir를 기준으로 그 다음 위치 값을 계산합니다.
-    nx, ny = x + dxs[dir_num], y + dys[dir_num]
+    x, y = x+dx[dn], y+dy[dn]
     
-    # 더 이상 나아갈 수 없다면
-    # 시계방향으로 90'를 회전합니다.
-    if not in_range(nx, ny) or answer[nx][ny] != 0:
-        dir_num = (dir_num + 1) % 4
+    arr[x][y]=i
 
-    # 그 다음 위치로 이동한 다음 배열에 올바른 값을 채워넣습니다.
-    x, y = x + dxs[dir_num], y + dys[dir_num]
-    answer[x][y] = i
 
-# 출력:
 for i in range(n):
     for j in range(m):
-        print(answer[i][j], end = ' ')
+        print(f"{arr[i][j]}", end=" ")
     print()
