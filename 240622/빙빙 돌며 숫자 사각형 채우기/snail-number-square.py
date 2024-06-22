@@ -1,4 +1,4 @@
-n, m = tuple(map(int, input().split()))
+n, m = tuple(map(int, input().split())) # 1 , 6 
 
 arr =[
     [0] * m
@@ -22,6 +22,7 @@ for i in range(2, m*n +1):
         dn = (dn + 1) % 4
 
     x, y = x+dx[dn], y+dy[dn]
+    
     arr[x][y]=i
 
 
