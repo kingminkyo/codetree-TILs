@@ -7,6 +7,7 @@ dx, dy = [0, 1, 0, -1], [1, 0, -1, 0]
 
 d_dir = 3
 cnt = 0
+ok = False
 for n in word:
     if n == "F":
         x, y = x+dx[d_dir], y+dy[d_dir]
@@ -21,6 +22,10 @@ for n in word:
     
     
     if x == 0 and y == 0:
+        ok = True
         break
 
-print(cnt)
+if ok:
+    print(cnt)
+else:
+    print(-1)
