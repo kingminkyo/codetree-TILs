@@ -17,7 +17,7 @@ arr[0][0] = chr(65)
 orin = 64
 for i in range(2, n*m + 1):
 
-    i = i % 27
+    i = i % 28
 
     i = orin + i
     
