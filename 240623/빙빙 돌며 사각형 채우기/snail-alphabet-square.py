@@ -15,7 +15,8 @@ def in_range(x, y):
 
 arr[0][0] = chr(65)
 for i in range(2, n*m + 1):
-    i = (i+64) % 65 + 65
+    i = (i) % 65 + 66
+
     word = chr(i)
 
     nx, ny = x+dxs[d_dir], y+dys[d_dir]
