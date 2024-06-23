@@ -15,10 +15,11 @@ d_dir = 0
 x, y = 0, 0
 
 for i in range(2, m*n+1):
-    x, y = x+dxs[d_dir], y+dys[d_dir]
-
     if not in_range(x+dxs[d_dir], y+dys[d_dir]) or arr[x+dxs[d_dir]][y+dys[d_dir]] != 0:
         d_dir = (d_dir + 1) % 4
+        
+    x, y = x+dxs[d_dir], y+dys[d_dir]
+
 
     arr[x][y] = i
 
