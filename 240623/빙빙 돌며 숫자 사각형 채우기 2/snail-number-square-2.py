@@ -22,4 +22,7 @@ for i in range(2, m*n+1):
         d_dir = (d_dir + 1) % 4
 
 
-print(arr)
+for i in range(n):
+    for j in range(m):
+        print(arr[i][j], end=" ")
+    print()
