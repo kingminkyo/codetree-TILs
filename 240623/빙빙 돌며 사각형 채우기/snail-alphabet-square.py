@@ -14,8 +14,8 @@ def in_range(x, y):
     return x >= 0 and x<n and y>=0 and y<m 
 
 arr[0][0] = chr(65)
-orin = 64
-for i in range(2, n*m + 1):
+orin = 65
+for i in range(1, n*m ):
 
     i = i % 26
 
