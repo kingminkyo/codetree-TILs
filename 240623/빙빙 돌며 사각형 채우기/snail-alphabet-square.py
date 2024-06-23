@@ -23,7 +23,7 @@ for i in range(2, n*m + 1):
         i-= 52
 
 
-    elif i >= 92:
+    elif i >= 91:
         i -= 26
 
     
