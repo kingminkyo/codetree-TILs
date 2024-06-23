@@ -9,7 +9,7 @@ arr[0][0] = 1
 dxs, dys = [1, 0, -1, 0], [0, 1, 0, -1]
 
 def in_range(x, y):
-    return x>=0 and x<n and y>=0 and y<m
+    return x>=0 and x<m and y>=0 and y<n
 
 d_dir = 0
 x, y = 0, 0
