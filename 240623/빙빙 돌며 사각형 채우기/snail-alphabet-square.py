@@ -16,12 +16,15 @@ def in_range(x, y):
 arr[0][0] = chr(65)
 for i in range(2, n*m + 1):
     i = ((i+64)%65) + 65
+
     if i>= (91+52):
-        i-= 52
+        i-= 78
 
 
     elif i>= (91+26):
-        i-= 25
+        i-= 52
+    elif i>= 91:
+        i-= 26
 
     
     word = chr(i)
