@@ -9,4 +9,4 @@ a2.sort()
 if a1 == a2:
     print("Yes")
 else:
-    print(No)
+    print("No")
