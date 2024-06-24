@@ -2,10 +2,11 @@ n, k, t = tuple(input().split())
 n, k = int(n), int(k)
 
 words = []
+sz = len(t)
 
 for _ in range(n):
     w = input()
-    if w[:2] == t:
+    if w[:sz] == t:
         words.append(w)
 
 words.sort()
