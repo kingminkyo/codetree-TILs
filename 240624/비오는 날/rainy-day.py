@@ -1,29 +1,22 @@
-from datetime import datetime
-
-# 입력 받기
 n = int(input())
 
-weather_data = []
+class Date:
+    def __init__(self, date, day, weather):
+        self.date = date
+        self.day = day
+        self.weather = weather
+
+dates = []
+
 
 for _ in range(n):
-    data = input().split()
-    date_str = data[0]
-    day = data[1]
-    weather = data[2]
-    weather_data.append((date_str, day, weather))
+    dt, dy, wt = tuple(input().split())
+    dates.append(Date(dt, dy, wt))
 
-# 초기화
-earliest_rain_date = None
-earliest_rain_info = None
+fast = Date("9999-99-99", "", "")
 
-# 날짜 비교
-for date_str, day, weather in weather_data:
-    if weather == "Rain":
-        date = datetime.strptime(date_str, '%Y-%m-%d')
-        if earliest_rain_date is None or date < earliest_rain_date:
-            earliest_rain_date = date
-            earliest_rain_info = (date_str, day, weather)
+for d in dates:
+    if d.weather == "Rain" and (fast.date > d.date):
+        fast = d
 
-# 결과 출력
-if earliest_rain_info:
-    print(" ".join(earliest_rain_info))
+print(fast.date)
