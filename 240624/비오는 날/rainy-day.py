@@ -19,4 +19,4 @@ for d in dates:
     if d.weather == "Rain" and (fast.date > d.date):
         fast = d
 
-print(fast.date)
+print(f"{fast.date} {fast.day} {fast.weather}")
