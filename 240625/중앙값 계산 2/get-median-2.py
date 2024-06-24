@@ -2,11 +2,11 @@ n = int(input())
 arr = list(map(int, input().split()))
 
 words = []
-for a in arr:
-    words.append(a)
-    mid = int(len(words)/2) -1
+for i in range(len(arr)):
+    words.append(arr[i])
+    mid = int(len(words)/2) 
     words.sort()
-
-    if a % 2 == 1:
-        # print(words)
+    
+    if (i+1) % 2 == 1:
         print(words[mid], end=" ")
+        # print(words)
