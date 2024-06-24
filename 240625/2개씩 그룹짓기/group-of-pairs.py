@@ -8,11 +8,15 @@ a1 = []
 a2 = []
 
 for a in arr:
-    if i % 2 == 0:
+    if i == 0:
         a1.append(a)
-    else:
+    elif i  == 1:
         a2.append(a)
-    i+=1
+    elif i  == 2:
+        a2.append(a)
+    else:
+        a1.append(a)
+    i = (i + 1) % 4
 
 a1sum = 0
 a2sum = 0
