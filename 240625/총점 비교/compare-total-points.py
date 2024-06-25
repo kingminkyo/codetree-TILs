@@ -10,7 +10,7 @@ for _ in range(n):
     n, a, b, c = tuple(input().split())
     students.append(Student(n, a, b, c))
 
-students.sort(key = lambda x:x.total)
+students.sort(key = lambda x:-x.total)
 
 for s in students:
     print(f"{s.n} {s.a} {s.b} {s.c}")
