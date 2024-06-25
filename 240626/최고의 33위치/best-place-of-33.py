@@ -14,11 +14,13 @@ for i in range(n-2):
         for a in range(3):
             for b in range(3):
                 if in_range(i+a, i+b):
+
                     count = count + arr[i+a][i+b]       
+                # print (count, i, j, i+a, j+b)
+        
         
         if count > result:
             result = count
-        
         count = 0
 
 print(result)
