@@ -8,6 +8,7 @@ n = int(input())
 students = []
 for _ in range(n):
     n, a, b, c = tuple(input().split())
+    a, b, c = int(a), int(b), int(c)
     students.append(Student(n, a, b, c))
 
 students.sort(key = lambda x:-x.total)
