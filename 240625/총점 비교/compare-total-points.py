@@ -13,4 +13,4 @@ for _ in range(n):
 students.sort(key = lambda x:x.total)
 
 for s in students:
-    print(f"{s.n} {s.a} {s.b} {s.c}", end=" ")
+    print(f"{s.n} {s.a} {s.b} {s.c}")
