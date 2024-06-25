@@ -2,7 +2,7 @@ n = int(input())
 
 class Person:
     def __init__(self, name, tall, weight):
-        self.name , self.tall, self. weitht = name, tall, weight
+        self.name , self.tall, self.weight = name, tall, weight
 
 persons = []
 for _ in range(n):
