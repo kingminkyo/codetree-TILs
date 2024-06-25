@@ -2,9 +2,9 @@ class Person:
     def __init__(self, n, h, w):
         self.n, self.h, self.w = n, h, w
 
-n = int(input())
+# n = int(input())
 persons = []
-for _ in range(n):
+for _ in range(5):
     n, h, w = tuple(input().split())
     h, w = int(h), float(w)
 
@@ -18,7 +18,7 @@ for p in persons:
 print()
 
 print("height")
-persons.sort(key = lambda x:x.h)
+persons.sort(key = lambda x: -x.h)
 
 for p in persons:
     print(f"{p.n} {p.h} {p.w}")
