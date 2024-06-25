@@ -15,7 +15,7 @@ for i in range(n-2):
             for b in range(3):
                 if in_range(i+a, i+b):
 
-                    count = count + arr[i+a][i+b]       
+                    count = count + arr[i+a][j+b]       
                 # print (count, i, j, i+a, j+b)
         
         
