@@ -13,7 +13,7 @@ result = 0
 for i in range(n):
     cnt = 0
     for j in range(n):
-        if in_range(i, j-1) and arr[i][j] == arr[i][j-1]:
+        if j>0 and arr[i][j] == arr[i][j-1]:
             cnt += 1
             # print(i, j)
         if cnt == m:
@@ -23,7 +23,7 @@ cnt = 0
 for i in range(n):
     cnt = 0
     for j in range(n):
-        if in_range(j-1, i) and arr[j][i] == arr[j-1][i]:
+        if j>0 and arr[j][i] == arr[j-1][i]:
             cnt += 1
             
         if cnt == m:
