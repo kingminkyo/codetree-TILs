@@ -14,7 +14,7 @@ for i in range(n):
         if arr[i][j] == arr[i][j-1]:
             count+= 1 
 
-        result = max(count, result)
+    result = max(count, result)
 
 
 print(result)
