@@ -15,9 +15,10 @@ for i in range(n):
     for j in range(n):
         if in_range(i, j-1) and arr[i][j] == arr[i][j-1]:
             cnt += 1
-            
+            print(i, j)
         if cnt == m:
             result += 1 
+            break
 
 for i in range(n):
     cnt = 0
@@ -27,6 +28,7 @@ for i in range(n):
             
         if cnt == m:
             result += 1 
+            break
 
 
 print(result)
