@@ -19,7 +19,7 @@ for i in range(n):
         if cnt == m:
             result += 1 
             break
-
+cnt = 0
 for i in range(n):
     cnt = 0
     for j in range(n):
