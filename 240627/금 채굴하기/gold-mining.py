@@ -23,7 +23,7 @@ max_gold = 0
 
 for i in range(n):
     for j in range(n):
-        for k in range(n):
+        for k in range(n+1):
             nog = get_num_of_gold(i, j, k)
 
             if nog * m >= get_area(k):
