@@ -1,8 +1,8 @@
 n = int(input())
-arr ={
+arr =[
     list(map(int, input().split()))
     for _ in range(n)
-}
+]
 
 dxs, dys = [-1, -1, 1, 1], [1, -1, -1, 1] 
 
@@ -16,7 +16,7 @@ def square(x, y, k, l):
     
     move_nums = [k, l, k, l]
 
-    for dx, dy, move_num in zip(dxs, dys, move_num):
+    for dx, dy, move_num in zip(dxs, dys, move_nums):
         for _ in range(move_num):
             x, y = x+dx, y+dy
 
@@ -32,8 +32,8 @@ ans = 0
 
 for i in range(n):
     for j in range(n):
-        for k in range(n):
-            for l in range(n):
+        for k in range(1, n):
+            for l in range(1, n):
                 ans = max(ans, square(i, j, k, l))
 
 
