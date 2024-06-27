@@ -26,7 +26,7 @@ for i in range(n):
         for k in range(n):
             nog = get_num_of_gold(i, j, k)
 
-            if nog * m > get_area(k):
+            if nog * m >= get_area(k):
                 max_gold = max(max_gold, nog)
 
 print(max_gold)
