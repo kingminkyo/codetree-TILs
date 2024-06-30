@@ -26,7 +26,7 @@ def make_square(x1, y1, x2, y2):
 
 
 result = 0
-max_size = 0
+max_size = -1
 for i in range(n):
     for j in range(m):
         for k in range(n):
