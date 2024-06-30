@@ -31,8 +31,9 @@ for i in range(n):
     for j in range(m):
         for k in range(n):
             for l in range(m):
-                if result < make_square(i, j, k, l):
-                    result = make_square(i, j, k, l)
-                    max_size = (k - i +1) * (l - j +1)
+                if make_square(i, j, k, l) != 0:
+                    
+                    max_size = max(max_size, (k - i +1) * (l - j +1))
+                    # print(i, j, k, l)
 
 print(max_size)
