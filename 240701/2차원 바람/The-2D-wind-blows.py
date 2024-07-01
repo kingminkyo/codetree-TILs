@@ -69,8 +69,9 @@ def rolling(x1, y1, x2, y2):
 
 
     
-w = winds[0]
-rolling(w.x1, w.y1, w.x2, w.y2)
+for w in winds:
+    rolling(w.x1, w.y1, w.x2, w.y2)
+    
 
 
 
