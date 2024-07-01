@@ -16,7 +16,9 @@ def incoding(word):
             new_word.append(word[i-1])
             new_word.append(cnt)
 
-    if new_word[1] == 10:
+    if len(word) == 1:
+        return 2
+    elif new_word[1] == 10:
         return 3
 
     return len(new_word)
