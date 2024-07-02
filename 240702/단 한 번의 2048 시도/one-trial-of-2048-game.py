@@ -72,22 +72,22 @@ def left_gob():
                 arr[i][j] = 0
 
 def up_gob():
-    for j in range(4):
+    for i in range(4):
         
-        for i in range(1, 4):
+        for j in range(1, 4):
 
-            if arr[i][j] == arr[i][j-1]:
-                arr[i][j] *= 2
-                arr[i][j-1] = 0
+            if arr[j][i] == arr[j-1][i]:
+                arr[j][i] *= 2
+                arr[j-1][i] = 0
 
 def down_gob():
-    for j in range(4):
+    for i in range(4):
         
-        for i in range(3, 1, -1):
+        for j in range(3, 0, -1):
 
-            if arr[i][j] == arr[i][j-1]:
-                arr[i][j] *= 2
-                arr[i][j-1] = 0
+            if arr[j][i] == arr[j-1][i]:
+                arr[j][i] *= 2
+                arr[j-1][i] = 0
 
 
 if d_dir == "R":
