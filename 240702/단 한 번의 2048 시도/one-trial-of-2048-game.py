@@ -77,8 +77,8 @@ def up_gob():
         for i in range(1, 4):
 
             if arr[i][j] == arr[i][j-1]:
-                arr[i][j] *= 2
-                arr[i][j-1] = 0
+                arr[i][j-1] *= 2
+                arr[i][j] = 0
 
 def down_gob():
     for j in range(4):
