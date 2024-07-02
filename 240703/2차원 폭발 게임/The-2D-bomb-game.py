@@ -29,7 +29,7 @@ def bomb():
     
     while True:
         is_bomb = False
-
+        rain()
         for i in range(n):
 
             for idx in range(n):
@@ -49,6 +49,7 @@ def bomb():
                     is_bomb = True
                     for e in range(start, start+end+1):
                         arr[e][i] = 0
+
         if not is_bomb:
             break
 
@@ -71,7 +72,7 @@ def rain():
 
 
 # bomb()
-for _ in range(k+1):
+for _ in range(k):
     bomb()  
     rain()
     rotate()
