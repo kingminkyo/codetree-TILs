@@ -17,13 +17,13 @@ while True:
 
         end_idx = index
 
-        for i in range(index, len(arr)):
+        for i in range(index+1, len(arr)):
             if arr[i] == arr[index]:
                 end_idx += 1
             else:
                 break
         
-        if (end_idx - index) >= m:
+        if (end_idx - index + 1) >= m:
             is_bomb = True        
             for i in range(index, end_idx):
                 arr[i] = 0
