@@ -71,7 +71,7 @@ def rain():
 
 
 # bomb()
-for _ in range(k):
+for _ in range(k+1):
     bomb()  
     rain()
     rotate()
@@ -80,6 +80,7 @@ for _ in range(k):
 
 bomb()  
 rain()
+
 
 result = 0
 for i in range(n):
