@@ -76,8 +76,8 @@ for _ in range(k):
     rain()
     rotate()
     rain()
-    # bomb()
-    # rain()
+    bomb()
+    rain()
 
 result = 0
 for i in range(n):
