@@ -27,25 +27,32 @@ def rotate():
 
 def bomb():
     
+    while True:
+        is_bomb = False
 
-    for i in range(n):
+        for i in range(n):
 
-        for idx in range(n):
-            start = idx
+            for idx in range(n):
+                start = idx
 
-            end = 0
+                end = 0
 
-            if arr[idx][i] == 0:
-                continue
-            
-            for e in range(start+1, n):
-                if arr[idx][i] == arr[e][i]:
-                    end += 1
-                else:
-                    break
-            if end>=(m-1):
-                for e in range(start, start+end+1):
-                    arr[e][i] = 0
+                if arr[idx][i] == 0:
+                    continue
+                
+                for e in range(start+1, n):
+                    if arr[idx][i] == arr[e][i]:
+                        end += 1
+                    else:
+                        break
+                if end>=(m-1):
+                    is_bomb = True
+                    for e in range(start, start+end+1):
+                        arr[e][i] = 0
+        if not is_bomb:
+            break
+
+                    
 
 def rain():
     for i in range(n):
@@ -69,8 +76,8 @@ for _ in range(k):
     rain()
     rotate()
     rain()
-    bomb()
-    rain()
+    # bomb()
+    # rain()
 
 result = 0
 for i in range(n):
