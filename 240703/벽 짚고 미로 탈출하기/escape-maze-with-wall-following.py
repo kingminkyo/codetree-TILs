@@ -66,7 +66,7 @@ for time in range(1, n*n):
     if cnt >= 4:
         is_out = True
 
-if is_out or time_cnt > (n*n/2):
+if is_out or time_cnt > (n*n-1):
     print(-1)
 else:
     print(time_cnt)
