@@ -25,7 +25,7 @@ dxs, dys = [0, 1, 0, -1], [1, 0, -1, 0]
 def in_range(x, y):
     return x>=0 and x<n and y>=0 and y<n
 
-for _ in range(n):
+for _ in range(t):
     for i in range(n):
         for j in range(n):
             max_num = 0
