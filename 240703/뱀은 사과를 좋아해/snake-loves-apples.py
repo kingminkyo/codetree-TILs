@@ -53,8 +53,9 @@ for c in commands:
 
     for i in range(c.num):
         nx, ny = x+dxs[d_dir], y+dys[d_dir]
-
+        # print(c.dct, i)
         if not in_range(nx, ny):
+            cnt+= 1
             is_gameover = True
             break
 
@@ -67,16 +68,24 @@ for c in commands:
             x, y = nx, ny
             arr[nx][ny] = 0
             cnt += 1 
+            # print(x, y)
         else : 
             if len(roots) != 0:
                 roots.pop()
                 roots.append(Snake(x, y, cnt))
                 root_sort()
             x, y = nx, ny
-            
+            # print(x, y)
             cnt += 1 
 
-        
+        #경로인지 탐색 
+        for root in roots:
+            if x == root.x and y == root.y:
+                is_gameover == True
+                break
+
+    if is_gameover:
+        break        
 
 
     
