@@ -31,31 +31,17 @@ def in_range(x, y):
     return 0 <= x < n and 0 <= y < n
 
 # 뱀의 몸통을 저장할 리스트
-roots = []
-
-# 디버깅을 위한 함수 (뱀의 현재 상태 출력)
-def print_roots():
-    print("root: ", end=" ")
-    for root in roots:
-        print(f"{root.x} {root.y} {root.num} / ", end=" ")
-    print()
-    print()
+snake = [(0, 0)]
+# 초기 위치 설정
+x, y = 0, 0 
+cnt = 0
 
 # 방향 설정 (우, 하, 좌, 상)
 dxs, dys = [0, 1, 0, -1], [1, 0, -1, 0]
 d_dir = 0
 
-# 초기 위치 설정
-x, y = 0, 0 
-cnt = 0
-
-# 뱀의 몸통을 정렬하는 함수 (num 기준 내림차순)
-def root_sort():
-    roots.sort(key=lambda s: -s.num)
-
 # 명령 수행
 for c in commands:
-    
     if c.dct == "R":
         d_dir = 0
     elif c.dct == "D":
@@ -69,31 +55,21 @@ for c in commands:
 
     for _ in range(c.num):
         nx, ny = x + dxs[d_dir], y + dys[d_dir]
-        if not in_range(nx, ny):
+        if not in_range(nx, ny) or (nx, ny) in snake:
             cnt += 1
             is_gameover = True
             break
 
         # 사과 발견 시 
         if arr[nx][ny] == 1:
-            roots.append(Snake(x, y, cnt))
-            root_sort()
-            x, y = nx, ny
+            snake.append((nx, ny))
             arr[nx][ny] = 0
-            cnt += 1 
         else:
-            if len(roots) != 0:
-                roots.pop()
-                roots.append(Snake(x, y, cnt))
-                root_sort()
-            x, y = nx, ny
-            cnt += 1 
+            snake.append((nx, ny))
+            snake.pop(0)
 
-        # 뱀의 몸통과 부딪혔는지 체크
-        for root in roots:
-            if x == root.x and y == root.y:
-                is_gameover = True
-                break
+        x, y = nx, ny
+        cnt += 1 
 
     if is_gameover:
         break        
