@@ -28,7 +28,7 @@ def in_range(x, y):
 for _ in range(t):
     for i in range(n):
         for j in range(n):
-            max_num = 0
+            max_num = -1
             gx, gy = 0, 0 
             if count[i][j] != 0:
 
