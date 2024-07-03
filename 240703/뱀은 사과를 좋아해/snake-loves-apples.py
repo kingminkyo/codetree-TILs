@@ -67,7 +67,7 @@ for c in commands:
         nx, ny = x+dxs[d_dir], y+dys[d_dir]
         # print(c.dct, i)
         if not in_range(nx, ny):
-            print("아웃")
+            # print("아웃")
             cnt+= 1
             is_gameover = True
             break
