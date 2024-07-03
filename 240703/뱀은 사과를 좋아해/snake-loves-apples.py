@@ -91,26 +91,28 @@ for c in commands:
                 roots.append(Snake(x, y, cnt))
                 root_sort()
             x, y = nx, ny
-            if cnt>=655:
-                print(x, y)
+            # if cnt>=28:
+            #     print(x, y)
             cnt += 1 
             # print_roots()
 
         #꼬리랑 겹치는 경로인지 탐색 
         for root in roots:
-            if cnt>=655:
-                print()
-                print("체크")
-                print(x, y)
-                print(f"{root.x} {root.y}")
+            # if cnt>=33:
+            #     print()
+            #     print("체크")
+            #     print(x, y)
+            #     print(f"{root.x} {root.y}")
             if x == root.x and y == root.y:
-                # print("게임 오버")
+                if cnt>=655:
+                    print("꼬리에 박아서 게임 오버")
                 is_gameover = True
                 break
             # else:
             #     print(f"아니지롱 {root.x} {root.y}")
 
     if is_gameover:
+        
         break        
 
 print(cnt)
