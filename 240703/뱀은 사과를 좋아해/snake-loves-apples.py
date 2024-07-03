@@ -68,12 +68,11 @@ for c in commands:
         # print(c.dct, i)
         if not in_range(nx, ny):
             # print("아웃")
-            # cnt+= 1\0
+            cnt+= 1
             is_gameover = True
             break
 
         # 사과 발견 시 
-
         if arr[nx][ny] == 1:
             
             roots.append(Snake(x, y, cnt))
@@ -84,7 +83,6 @@ for c in commands:
             # print("eat", x, y)
             # print_roots()
             
-
         else : 
             if len(roots) != 0:
                 roots.pop()
