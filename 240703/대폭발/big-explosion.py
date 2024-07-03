@@ -35,12 +35,6 @@ def spread_bomb(x, y, t):
         nx, ny = x + dx*k, y + dy*k
         if in_range(nx, ny):
             temp[nx][ny] = 1
-    
-    
-    
-
-    
-
 
 
 for t in range(m+1):
@@ -48,7 +42,7 @@ for t in range(m+1):
         for j in range(n):
             if arr[i][j] == 1:
                 spread_bomb(i, j, t)
-                p_print()
+                # p_print()
 
     copy()
 
