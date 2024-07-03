@@ -1,11 +1,5 @@
 n, m, k = map(int, input().split())
 
-class Snake:
-    def __init__(self, x, y, num):
-        self.x = x
-        self.y = y
-        self.num = num
-
 class Command:
     def __init__(self, dct, num):
         self.dct = dct
@@ -17,7 +11,7 @@ arr = [[0 for _ in range(n)] for _ in range(n)]
 # 사과 위치 입력 받기
 for _ in range(m):
     x, y = map(int, input().split())
-    x, y = x-1, y-1  # 0부터 시작하는 인덱스로 변환
+    x, y = x - 1, y - 1  # 0부터 시작하는 인덱스로 변환
     arr[x][y] = 1 
 
 # 명령 입력 받기
@@ -55,12 +49,12 @@ for c in commands:
 
     for _ in range(c.num):
         nx, ny = x + dxs[d_dir], y + dys[d_dir]
+        cnt += 1
         if not in_range(nx, ny) or (nx, ny) in snake:
-            cnt += 1
             is_gameover = True
             break
 
-        # 사과 발견 시 
+        # 사과 발견 시
         if arr[nx][ny] == 1:
             snake.append((nx, ny))
             arr[nx][ny] = 0
@@ -69,7 +63,6 @@ for c in commands:
             snake.pop(0)
 
         x, y = nx, ny
-        cnt += 1 
 
     if is_gameover:
         break        
