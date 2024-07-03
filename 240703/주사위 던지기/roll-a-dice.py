@@ -29,7 +29,7 @@ for c in commands:
     # U D R L 
     u, d, f, b, r, l = "u", "d", "f", "b", "r", "l"    
     
-
+    ex = dice
 
     if c == "R":
         temp = dice[d]
@@ -64,10 +64,12 @@ for c in commands:
         d_dir = 3
     
     nx, ny = x+dxs[d_dir], y+dys[d_dir]
-    
+
     if in_range(nx, ny):
         x, y = nx, ny
         arr[x][y] = dice[d]
+    else:
+        dice = ex
     # for i in range(n):
     #     for j in range(n):
     #         print(arr[i][j], end=" ")
