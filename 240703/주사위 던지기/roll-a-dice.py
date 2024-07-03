@@ -22,10 +22,14 @@ d_dir = 0
 
 arr[x][y] = dice["d"]
 
+def in_range(x, y):
+    return x>=0 and x<n and y>=0 and y<n
+
 for c in commands:
     # U D R L 
     u, d, f, b, r, l = "u", "d", "f", "b", "r", "l"    
     
+
 
     if c == "R":
         temp = dice[d]
@@ -59,9 +63,11 @@ for c in commands:
         dice[f] = temp
         d_dir = 3
     
-    x, y = x+dxs[d_dir], y+dys[d_dir]
+    nx, ny = x+dxs[d_dir], y+dys[d_dir]
     
-    arr[x][y] = dice[d]
+    if in_range(nx, ny):
+        x, y = nx, ny
+        arr[x][y] = dice[d]
     # for i in range(n):
     #     for j in range(n):
     #         print(arr[i][j], end=" ")
