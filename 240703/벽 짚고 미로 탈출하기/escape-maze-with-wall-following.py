@@ -6,10 +6,8 @@ d_dir = 0
 
 arr = []
 for _ in range(n):
-    arr.append(input())
+    arr.append(list(input()))
 
-
-# print(arr)
 
 def in_range(x, y):
     return x>= 0 and x<n and y>=0 and y<n
@@ -17,10 +15,10 @@ def in_range(x, y):
 dxs, dys = [0, 1, 0, -1], [1, 0, -1, 0]
 
 is_out = False
-time_cnt = 0
+time_cnt = 1
 for time in range(1, n*n):
     cnt = 0 # 4가 되면 아웃 
-    time_cnt = time
+    
     #  처음에는 기존 방향 전진 가정
     nx, ny = x+dxs[d_dir], y+dys[d_dir]
 
@@ -36,6 +34,9 @@ for time in range(1, n*n):
 
     else:
         x, y = nx, ny
+        time_cnt += 1 
+
+    # print(x, y, d_dir)
 
     r_dir = (d_dir + 1 + 4) % 4
     rx, ry = x+dxs[r_dir], y+dys[r_dir]
@@ -47,7 +48,9 @@ for time in range(1, n*n):
         d_dir = r_dir
         x, y = x+dxs[d_dir], y+dys[d_dir]
         cnt += 1 
+        time_cnt += 1 
 
+    # print(x, y, d_dir)
     if cnt >= 4:
         is_out = True
 
