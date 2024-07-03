@@ -14,7 +14,7 @@ arr = [
 ]
 
 for _ in range(m):
-    x, y = int(input())
+    x, y = map(int, input().split())
     x, y = x-1, y-1 
     arr[x][y] = 1 
 
