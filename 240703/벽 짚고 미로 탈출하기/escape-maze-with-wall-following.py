@@ -16,21 +16,28 @@ dxs, dys = [0, 1, 0, -1], [1, 0, -1, 0]
 
 is_out = False
 time_cnt = 1
-cnt = 0
+# cnt = 0
 for time in range(1, n*n):
-    # cnt = 0 # 4가 되면 아웃 
+    cnt = 0 # 4가 되면 아웃 
     if arr[x][y] == "#":
         is_out = True
         break
     
     #  처음에는 기존 방향 전진 가정
-    nx, ny = x+dxs[d_dir], y+dys[d_dir]
+    for _ in range(4):
+        nx, ny = x+dxs[d_dir], y+dys[d_dir]
 
-    # 바라보고 있는 방향 이동 불가능, 방향전환
-    if in_range(nx, ny) and arr[nx][ny] == "#":
-        d_dir = (d_dir -1 + 4) % 4
+        # 바라보고 있는 방향 이동 불가능, 방향전환
+        if in_range(nx, ny) and arr[nx][ny] == "#":
+            d_dir = (d_dir -1 + 4) % 4
+        else:
+            break
+
+    
 
     #이동 가능 1 
+
+
 
     nx, ny = x+dxs[d_dir], y+dys[d_dir]
     if not in_range(nx, ny):
