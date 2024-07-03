@@ -20,7 +20,7 @@ for _ in range(m):
     x, y = x-1, y-1
     count[x][y] = 1
 
-dxs, dys = [0, 1, 0, -1], [1, 0, -1, 0]
+dxs, dys = [-1, 1, 0, 0], [0, 0, -1, 1]
 
 def in_range(x, y):
     return x>=0 and x<n and y>=0 and y<n
@@ -34,7 +34,7 @@ for _ in range(t):
 
                 for dx, dy in zip(dxs, dys):
                     nx, ny = i+dx, j+dy
-                    if in_range(nx, ny) and arr[nx][ny] >= max_num:
+                    if in_range(nx, ny) and arr[nx][ny] > max_num:
 
                         max_num = arr[nx][ny]
                         gx, gy = nx, ny
