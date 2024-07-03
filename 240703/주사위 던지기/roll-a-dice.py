@@ -20,6 +20,8 @@ dxs, dys = [0, 1, 0, -1], [1, 0, -1, 0]
 
 d_dir = 0
 
+arr[x][y] = dice["d"]
+
 for c in commands:
     # U D R L 
     u, d, f, b, r, l = "u", "d", "f", "b", "r", "l"    
@@ -60,7 +62,11 @@ for c in commands:
     x, y = x+dxs[d_dir], y+dys[d_dir]
     
     arr[x][y] = dice[d]
-
+    # for i in range(n):
+    #     for j in range(n):
+    #         print(arr[i][j], end=" ")
+    #     print()
+    # print()
 
 result = 0
 
