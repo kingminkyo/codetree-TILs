@@ -105,7 +105,8 @@ for c in commands:
             #     print(f"{root.x} {root.y}")
             if x == root.x and y == root.y:
                 if cnt>=655:
-                    print("꼬리에 박아서 게임 오버")
+                    # print("꼬리에 박아서 게임 오버")
+                    cnt -= 1 
                 is_gameover = True
                 break
             # else:
