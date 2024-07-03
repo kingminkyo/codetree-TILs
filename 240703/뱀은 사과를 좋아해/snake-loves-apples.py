@@ -68,7 +68,7 @@ for c in commands:
         # print(c.dct, i)
         if not in_range(nx, ny):
             # print("아웃")
-            cnt+= 1
+            # cnt+= 1\0
             is_gameover = True
             break
 
