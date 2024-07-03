@@ -16,8 +16,12 @@ dxs, dys = [0, 1, 0, -1], [1, 0, -1, 0]
 
 is_out = False
 time_cnt = 1
+cnt = 0
 for time in range(1, n*n):
-    cnt = 0 # 4가 되면 아웃 
+    # cnt = 0 # 4가 되면 아웃 
+    if arr[x][y] == "#":
+        is_out = True
+        break
     
     #  처음에는 기존 방향 전진 가정
     nx, ny = x+dxs[d_dir], y+dys[d_dir]
@@ -36,7 +40,7 @@ for time in range(1, n*n):
         x, y = nx, ny
         time_cnt += 1 
 
-    # print(x, y, d_dir)
+    # print(x, y, d_dir, cnt)
 
     r_dir = (d_dir + 1 + 4) % 4
     rx, ry = x+dxs[r_dir], y+dys[r_dir]
@@ -50,11 +54,12 @@ for time in range(1, n*n):
         cnt += 1 
         time_cnt += 1 
 
-    # print(x, y, d_dir)
+    # print(x, y, d_dir, cnt)
+
     if cnt >= 4:
         is_out = True
 
-if is_out:
+if is_out or time_cnt > (n*n):
     print(-1)
 else:
     print(time_cnt)
