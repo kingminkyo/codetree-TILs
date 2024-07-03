@@ -32,41 +32,52 @@ for c in commands:
     ex = dice
 
     if c == "R":
-        temp = dice[d]
-        dice[d] = dice[r]
-        dice[r] = dice[u]
-        dice[u] = dice[l]
-        dice[l] = temp
         d_dir = 0
 
     if c == "D":
-        temp = dice[d]
-        dice[d] = dice[f]
-        dice[f] = dice[u]
-        dice[u] = dice[b]
-        dice[b] = temp
         d_dir = 1
     
     if c == "L":
-        temp= dice[d]
-        dice[d] = dice[l]
-        dice[l] = dice[u]
-        dice[u] = dice[r]
-        dice[r] = temp
         d_dir = 2
 
     if c == "U":
-        temp = dice[d]
-        dice[d] = dice[b]
-        dice[b] = dice[u]
-        dice[u] = dice[f]
-        dice[f] = temp
         d_dir = 3
     
     nx, ny = x+dxs[d_dir], y+dys[d_dir]
 
     if in_range(nx, ny):
         x, y = nx, ny
+        if c == "R":
+            temp = dice[d]
+            dice[d] = dice[r]
+            dice[r] = dice[u]
+            dice[u] = dice[l]
+            dice[l] = temp
+            d_dir = 0
+
+        if c == "D":
+            temp = dice[d]
+            dice[d] = dice[f]
+            dice[f] = dice[u]
+            dice[u] = dice[b]
+            dice[b] = temp
+            d_dir = 1
+        
+        if c == "L":
+            temp= dice[d]
+            dice[d] = dice[l]
+            dice[l] = dice[u]
+            dice[u] = dice[r]
+            dice[r] = temp
+            d_dir = 2
+
+        if c == "U":
+            temp = dice[d]
+            dice[d] = dice[b]
+            dice[b] = dice[u]
+            dice[u] = dice[f]
+            dice[f] = temp
+            d_dir = 3
         arr[x][y] = dice[d]
     else:
         dice = ex
