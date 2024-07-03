@@ -25,7 +25,7 @@ dxs, dys = [0, 1, 0, -1], [1, 0, -1, 0]
 def in_range(x, y):
     return x>=0 and x<n and y>=0 and y<n
 
-for _ in range(2):
+for _ in range(n):
     for i in range(n):
         for j in range(n):
             max_num = 0
@@ -49,6 +49,11 @@ for _ in range(2):
             if count[i][j] >= 2:
                 count[i][j] = 0
             temp_count[i][j] = 0
+
+    # for i in range(n):
+    #     for j in range(n):
+    #         print(count[i][j], end=" ")
+    #     print()
 
 cnt = 0 
 
