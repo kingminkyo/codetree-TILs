@@ -11,8 +11,9 @@ def in_range(x, y):
 
 
 def swap(x, y):
-    num = arr[x][y]
+    num = -1
     cx, cy = x, y
+    
     for dx, dy in zip(dxs, dys):
         nx, ny = x+dx, y+dy
         if in_range(nx, ny) and arr[nx][ny] > num:
@@ -22,12 +23,9 @@ def swap(x, y):
     arr[x][y], arr[cx][cy] = arr[cx][cy], arr[x][y]
             
 
-    
-
 for _ in range(m):
     for num in range(1, n*n+1):
-        max_num = -1 
-        x, y = 0, 0 
+
         ok = False
         for i in range (n):
             for j in range(n):
@@ -37,6 +35,12 @@ for _ in range(m):
                     break
             if ok:
                 break
+        # print(num)
+        # for i in range(n):
+        #     for j in range(n):
+        #         print(arr[i][j], end=" ")
+        #     print()
+        # print()
 
 for i in range(n):
     for j in range(n):
