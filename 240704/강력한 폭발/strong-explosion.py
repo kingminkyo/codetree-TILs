@@ -85,12 +85,12 @@ def print_temp():
 def choose(curr_num):
     global check_cnt
     if curr_num == bomb_num:
-        print_ans()
+        # print_ans()
         for index, num in enumerate(ans):
             x, y = bomb_area[index]
             bomb(num, x, y)
         check_cnt = max(check_cnt, check_count())
-        print_temp()
+        # print_temp()
         clear_temp()
 
         return
