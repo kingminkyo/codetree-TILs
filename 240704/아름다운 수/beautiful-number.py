@@ -27,7 +27,7 @@ def check_beautiful():
             if check[0] == len(check):
                 for _ in range(len(check)):
                     check.pop()
-        print(check)
+        # print(check)
     if len(check) == 0:
         cnt += 1 
     
@@ -47,3 +47,5 @@ def choose(curr_num):
 
 
 choose(1)
+
+print(cnt)
