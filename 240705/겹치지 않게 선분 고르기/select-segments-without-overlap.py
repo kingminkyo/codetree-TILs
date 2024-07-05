@@ -16,8 +16,8 @@ for _ in range(n):
 
 lines.sort(key = lambda x: (-x.x1, -x.x2))
 
-for line in lines:
-    print(line.x1, line.x2)
+# for line in lines:
+#     print(line.x1, line.x2)
 
 
 
@@ -72,3 +72,5 @@ def choose(curr_num):
 # 000 001 010 011 100 101 110 111 
 
 choose(0)
+
+print(cnt)
