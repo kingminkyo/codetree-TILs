@@ -25,8 +25,9 @@ final = 0
 def choose(curr_num, cnt):
     global final
 
-    if curr_num == n+1:
+    if curr_num == n:
         if cnt == m:
+            # print_ans()
             final = max(final, check_xor())
         return
 
