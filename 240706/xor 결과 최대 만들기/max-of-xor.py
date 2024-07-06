@@ -1,7 +1,5 @@
 n, m = tuple(map(int, input().split()))
-
 arr = list(map(int, input().split()))
-
 
 ans = []
 def print_ans():
