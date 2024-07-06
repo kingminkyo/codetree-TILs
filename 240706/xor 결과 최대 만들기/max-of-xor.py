@@ -1,41 +1,23 @@
 n, m = tuple(map(int, input().split()))
 arr = list(map(int, input().split()))
 
-ans = []
-def print_ans():
-    for a in ans:
-        print(a, end=" ")
-    print()
+ans = 0
 
+# 총 n개, 그리고 m개 조합 
 
-def check_xor():
-    num = []
-    for i in ans:
-        num.append(arr[i-1])
+def choose(curr_idx, cnt, curr_val):
+    global ans
 
-    result = num[0]
-
-    for i in range(1, len(num)):
-        result = result ^ num[i]
-
+    if cnt == m:
+        ans == max(ans, curr_val)
+        return
     
-    return result
-
-final = 0 
-def choose(curr_num, cnt):
-    global final
-
-    if curr_num == n:
-        if cnt == m:
-            # print_ans()
-            final = max(final, check_xor())
+    if curr_idx == n:
         return
 
-    ans.append(curr_num)
-    choose(curr_num+1, cnt+1)
-    ans.pop()
+    choose(curr_idx + 1, cnt, curr_val)
+    choose(curr_idx + 1, cnt + 1, curr_val ^ arr[curr_idx])
 
-    choose(curr_num+1, cnt)
 
-choose(0, 0)
-print(final)
+choose(0, 0, 0)
+print(ans)
