@@ -2,7 +2,7 @@ n, m = tuple(map(int, input().split()))
 
 
 arr = [
-    [0] for _ in range(n+1)
+    [] for _ in range(n+1)
 ]
 visited = [ False for _ in range(n+1)]
 
