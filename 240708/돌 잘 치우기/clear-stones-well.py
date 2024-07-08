@@ -106,7 +106,7 @@ def choose(curr_num, cnt):
                 copy[new_x][new_y] = 0
 
             for nx, ny in start_num:
-                count = 1
+                count += 1
                 visited[nx][ny] = 1
                 q.append((nx, ny))
                 bfs()
