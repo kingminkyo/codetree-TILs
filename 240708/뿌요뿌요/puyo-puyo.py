@@ -46,8 +46,8 @@ for i in range(n):
         block = 0
         dfs(i, j)
 
-        if block > 0:
+        if block >= 4:
             block_cnt += 1 
-            block_size = max(block_size, block)
+        block_size = max(block_size, block)
         
 print(block_cnt, block_size)
