@@ -79,11 +79,14 @@ for _ in range(k):
                 # print(check, i, j)
                 nr, nc = i, j
     # print(nr, nc)
+    # print_visited()
+    reset_visited()
+
     r, c = nr, nc
     visited[r][c] = 1
     q.append((r, c))
     max_num = arr[r][c]
-    # print_visited()
-    # reset_visited()
+    
+    
 
-print(c, r)
+print(r+1, c+1)
