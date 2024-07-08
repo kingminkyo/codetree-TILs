@@ -128,4 +128,4 @@ def choose(curr_num, cnt):
     choose(curr_num+1, cnt)
 
 choose(0, 0)
-print(check)
+print(check-1)
