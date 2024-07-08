@@ -28,7 +28,7 @@ for i in range(n):
 
 def dfs(x, y, k):
 
-    dxs, dys = [0, 0, 1, 0, -1], [0, 1, 0, -1, 0]
+    dxs, dys = [0, 1, 0, -1], [1, 0, -1, 0]
 
     for dx, dy in zip(dxs, dys):
         nx, ny = x+dx, y+dy
@@ -52,7 +52,8 @@ for k in range(1, max_k+1):
     reset_all()
     for i in range(n):
         for j in range(m):
-            if arr[i][j] > k and visited[i][j] == 0:
+            if can_go(i, j, k):
+                visited[i][j] = 1
                 cnt += 1 
                 dfs(i, j, k)
     # print(k)
