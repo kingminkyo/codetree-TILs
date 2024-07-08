@@ -112,7 +112,7 @@ def choose(curr_num, cnt):
                 bfs()
                 # print("x, y : ", nx, ny, "count, check:", count,check)
     
-                check = max(check, count)
+            check = max(check, count)
             
 
             # check = max(check, count)
@@ -128,4 +128,4 @@ def choose(curr_num, cnt):
     choose(curr_num+1, cnt)
 
 choose(0, 0)
-print(check-1)
+print(check)
