@@ -106,11 +106,14 @@ def choose(curr_num, cnt):
                 copy[new_x][new_y] = 0
 
             for nx, ny in start_num:
-                count += 1
-                visited[nx][ny] = 1
-                q.append((nx, ny))
-                bfs()
-                # print("x, y : ", nx, ny, "count, check:", count,check)
+                if visited[nx][ny] == 0:
+                    count += 1
+                    visited[nx][ny] = 1
+                    q.append((nx, ny))
+                    bfs()
+                # if count >= 10:
+                    # print_visited()
+                    # print("x, y : ", nx, ny, "count, check:", count,check, "new", new_x, new_y)
     
             check = max(check, count)
             
