@@ -20,9 +20,9 @@ def can_go(x, y, num):
     if not in_range(x, y):
         return False
     
-    if not visited[x][y] and arr[x][y] == num:
-        return True
-    return False
+    if visited[x][y] or arr[x][y] != num:
+        return False
+    return True
 
 block_cnt = 0
 block_size = 0
@@ -48,8 +48,8 @@ def dfs(x, y):
 for i in range(n):
     for j in range(n):
         if not visited[i][j]:
-            block = 0
-            # visited[i][j] = 1 
+            block = 1
+            visited[i][j] = 1 
             dfs(i, j)
 
             if block >= 4:
