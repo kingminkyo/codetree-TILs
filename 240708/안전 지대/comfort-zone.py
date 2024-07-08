@@ -45,7 +45,7 @@ def reset_all():
 
 
 cnt = 0
-result_k = 0
+result_k = 1
 result_a = 0
 for k in range(1, max_k+1):
     cnt = 0
