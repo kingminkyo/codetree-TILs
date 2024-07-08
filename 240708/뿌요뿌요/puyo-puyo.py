@@ -23,7 +23,7 @@ def can_go(x, y, num):
 
 block_cnt = 0
 block_size = 0
-
+block = 0
 def dfs(x, y):
     global block
 
