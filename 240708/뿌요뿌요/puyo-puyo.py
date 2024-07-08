@@ -1,5 +1,5 @@
-import sys
-sys.setrecursionlimit(250000)
+# import sys
+# sys.setrecursionlimit(250000)
 
 n = int(input())
 
@@ -29,7 +29,7 @@ block_size = 0
 block = 0
 def dfs(x, y):
     global block
-
+    
     num = arr[x][y]
 
     dxs, dys = [0, 1, 0, -1], [1, 0, -1, 0]
@@ -46,11 +46,12 @@ def dfs(x, y):
 
 for i in range(n):
     for j in range(n):
-        block = 0
-        dfs(i, j)
+        if not visited[i][j]:
+            block = 0
+            dfs(i, j)
 
-        if block >= 4:
-            block_cnt += 1 
-        block_size = max(block_size, block)
+            if block >= 4:
+                block_cnt += 1 
+            block_size = max(block_size, block)
         
 print(block_cnt, block_size)
