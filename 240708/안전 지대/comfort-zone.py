@@ -16,7 +16,7 @@ def can_go(x,y, k):
     if not in_range(x, y):
         return False
 
-    if visited[x][y] or arr[x][y] > k :
+    if visited[x][y] or arr[x][y] <= k :
         return False
     return True
 
@@ -39,10 +39,9 @@ def dfs(x, y, k):
             dfs(nx, ny, k)
 
 def reset_all():
-    visited = [
-    [0 for _ in range(m)]
-    for _ in range(n)
-    ]
+    for i in range(n):
+        for j in range(m):
+            visited[i][j] = 0
 
 
 cnt = 0
@@ -53,13 +52,21 @@ for k in range(1, max_k+1):
     reset_all()
     for i in range(n):
         for j in range(m):
-            if arr[i][j] <= k and visited[i][j] == 0:
+            if arr[i][j] > k and visited[i][j] == 0:
                 cnt += 1 
                 dfs(i, j, k)
+    # print(k)
+    # for i in range(n):
+    #     for j in range(m):
+    #         print(visited[i][j], end=" ")
+            
+    #     print()
+    # print(cnt)
+    # print()
 
     if result_a < cnt:
         result_a = cnt
         result_k = k
 
 
-print(result_k-1, result_a)
+print(result_k, result_a)
