@@ -35,7 +35,7 @@ def bfs():
             if can_go(nx, ny):
                 q.append((nx, ny))
                 visited[nx][ny] = 1
-                bfs()
+                
 
 start_point = []
 
