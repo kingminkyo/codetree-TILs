@@ -1,5 +1,6 @@
 import sys
-sys.setrecursionlimit(25000)
+sys.setrecursionlimit(250000)
+
 n = int(input())
 
 arr = [
