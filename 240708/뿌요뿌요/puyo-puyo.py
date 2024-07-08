@@ -48,7 +48,7 @@ def dfs(x, y):
 for i in range(n):
     for j in range(n):
         if not visited[i][j]:
-            block = 1
+            block = 0
             # visited[i][j] = 1 
             dfs(i, j)
 
