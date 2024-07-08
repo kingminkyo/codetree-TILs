@@ -1,6 +1,6 @@
 import sys
 
-sys.setrecursionlimit(10**5)
+sys.setrecursionlimit(2500)
 
 n, m = tuple(map(int, input().split()))
 arr = [
