@@ -26,7 +26,7 @@ cnt = 0
 def dfs(x, y):
     global cnt 
 
-    dxs, dys = [0, 1, 0, -1], [1, 0, -1, 0]
+    dxs, dys = [0, 0, 1, 0, -1], [0, 1, 0, -1, 0]
 
     for dx, dy in zip(dxs, dys):
         nx, ny = x+dx, y+dy
@@ -40,6 +40,9 @@ for i in range(n):
     for j in range(n):
         if arr[i][j] == 1:
             dfs(i, j)
+            
+            
+                
 
         if cnt >= 1:
             ans.append(cnt)
