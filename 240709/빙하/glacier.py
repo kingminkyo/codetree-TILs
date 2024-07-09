@@ -69,6 +69,12 @@ for i in range(n):
             cnt += 1 
 memory_cnt = cnt 
 
+def reset_visited():
+    for i in range(n):
+        for j in range(m):
+            visited[i][j] = 0
+
+
 for time in range(1, 5):
 
     cnt = 0
@@ -98,7 +104,7 @@ for time in range(1, 5):
 
     memory_cnt = cnt 
     
-    
+    reset_visited()
     # print_visited()
     # print_arr()
     on = False
