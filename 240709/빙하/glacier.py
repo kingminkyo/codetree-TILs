@@ -75,7 +75,7 @@ def reset_visited():
             visited[i][j] = 0
 
 
-for time in range(1, 5):
+for time in range(1, 1000):
 
     cnt = 0
 
