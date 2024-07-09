@@ -74,10 +74,10 @@ def city_check():
                     visited[i][j] = 1
                     q.append((i, j))
                     count += 1
-                    bfs()
                     # print_visited()
             grid_num += 1
 
+    bfs()
     return count 
 
 
