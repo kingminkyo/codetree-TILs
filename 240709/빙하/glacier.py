@@ -62,7 +62,16 @@ on = False
 cnt = 0 
 memory_cnt = 0
 curr_time = 0
+
+for i in range(n):
+    for j in range(m):
+        if arr[i][j] == 1:
+            cnt += 1 
+memory_cnt = cnt 
+
 for time in range(1, 5):
+
+    cnt = 0
 
     for i in range(n):
         for j in range(m):
@@ -88,7 +97,7 @@ for time in range(1, 5):
         break
 
     memory_cnt = cnt 
-    cnt = 0
+    
     
     # print_visited()
     # print_arr()
