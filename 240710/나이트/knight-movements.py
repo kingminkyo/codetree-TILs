@@ -44,7 +44,7 @@ def bfs():
 push(r1, c1, 0)
 bfs()
 # print(step)
-if step[r2][c2] != 0:
+if step[r2][c2] != -1:
     print( step[r2][c2])
 else:
     print(-1)
