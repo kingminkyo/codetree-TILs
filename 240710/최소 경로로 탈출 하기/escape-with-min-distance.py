@@ -42,4 +42,7 @@ def bfs():
 push(0, 0, 0)
 bfs()
 
-print(visited[n-1][m-1])
+if visited[n-1][m-1]:
+    print(visited[n-1][m-1])
+else:
+    print(-1)
