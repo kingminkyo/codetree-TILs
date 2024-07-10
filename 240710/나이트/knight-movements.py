@@ -5,6 +5,11 @@ visited = [
     [0 for i in range(n)]
     for _ in range(n)
 ]
+step = [
+    [-1 for i in range(n)]
+    for _ in range(n)
+]
+
 
 def in_range(x, y):
     return x>=0 and x<n and y>=0 and y<n
@@ -22,6 +27,7 @@ q = deque()
 
 def push(x, y, num):
     visited[x][y] = num
+    step[x][y] = num
     q.append((x, y))
 def bfs():
 
@@ -37,8 +43,8 @@ def bfs():
 
 push(r1, c1, 0)
 bfs()
-
-if visited[r2][c2]:
-    print( visited[r2][c2])
+# print(step)
+if step[r2][c2] != 0:
+    print( step[r2][c2])
 else:
     print(-1)
