@@ -22,7 +22,7 @@ def in_range(x, y):
 def can_go(x, y, num):
     if not in_range(x, y):
         return False
-    if arr[x][y] == 0 or  visited[x][y] != -1):
+    if arr[x][y] == 0 or  visited[x][y] != -1:
         return False
     return True
 
