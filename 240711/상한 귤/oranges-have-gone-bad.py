@@ -40,7 +40,7 @@ def bfs():
         x, y = q.popleft()
         for dx, dy in zip(dxs, dys):
             nx, ny = x+dx, y+dy
-            if can_go(nx, ny, visited[x][y]):
+            if 0 <= nx < n and 0 <= ny < n and arr[nx][ny] == 1 and visited[nx][ny] == -1:
                 push(nx, ny, visited[x][y] + 1)
 
 for i in range(n):
