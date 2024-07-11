@@ -22,7 +22,7 @@ def in_range(x, y):
 def can_go(x, y, num):
     if not in_range(x, y):
         return False
-    if arr[x][y] == 0 or (visited[x][y] <= num and visited[x][y] != -1):
+    if arr[x][y] == 0 or  visited[x][y] != -1):
         return False
     return True
 
@@ -40,7 +40,7 @@ def bfs():
         x, y = q.popleft()
         for dx, dy in zip(dxs, dys):
             nx, ny = x+dx, y+dy
-            if 0 <= nx < n and 0 <= ny < n and arr[nx][ny] == 1 and visited[nx][ny] == -1:
+            if can_go(nx, ny, visited[x][y]):
                 push(nx, ny, visited[x][y] + 1)
 
 for i in range(n):
