@@ -9,6 +9,6 @@ for _ in range(n):
     else:
         d[word] += 1
 
-    ans = max(ans, freq[word])
+    ans = max(ans, d[word])
 
 print(ans)
