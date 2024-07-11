@@ -135,4 +135,7 @@ def choose(curr_num, cnt):
 
 choose(0,0)
 
-print(min_time-1)
+if min_time==10000:
+    print(-1)
+else:
+    print(min_time-1)
