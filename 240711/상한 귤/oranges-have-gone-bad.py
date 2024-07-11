@@ -49,4 +49,8 @@ for i in range(n):
             push(i, j, 0)
             bfs()
 
+for i in range(n):
+    for j in range(n):
+        if arr[i][j] == 1 and visited[i][j] == -1:
+            visited[i][j] = -2
 print_visited()
