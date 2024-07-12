@@ -19,6 +19,5 @@ for k, v in count.items():
     numbers.append(Number(k, v))
 
 numbers.sort(key = lambda x: (-x.value, -x.keys))
-
-for i in range(k):
+for i in range(min(k, len(numbers))):
     print(f"{numbers[i].keys}", end=" ")
