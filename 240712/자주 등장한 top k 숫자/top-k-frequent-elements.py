@@ -1,4 +1,4 @@
-m, k = tuple(map(int, input().split()))
+m, limit = tuple(map(int, input().split()))
 arr = list(map(int, input().split()))
 
 count = dict()
@@ -13,12 +13,14 @@ class Number:
     def __init__(self, keys, value):
         self.keys = keys
         self.value = value
-
-numbers = [Number(k, v ) for k, v in count.items()]
-# for k, v in count.items():
-#     numbers.append(Number(k, v))
+numbers = []
+# numbers = [Number(k, v ) for k, v in count.items()]
+for k, v in count.items():
+    numbers.append(Number(k, v))
 
 numbers.sort(key = lambda x: (-x.value, -x.keys))
-
-for i in range(min(k, len(numbers))):
+# print(count)
+# print(len(numbers))
+for i in range(limit):
+    
     print(numbers[i].keys, end=" ")
