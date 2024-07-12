@@ -15,5 +15,5 @@ for k, v in count.items():
         key = False
         break
 
-if not key:
+if key:
     print("None")
