@@ -14,9 +14,11 @@ class Number:
         self.keys = keys
         self.value = value
 
-numbers = [Number(key, value) for key, value in count.items()]
+numbers = []
+for k, v in count.items():
+    numbers.append(Number(k, v))
 
 numbers.sort(key = lambda x: (-x.value, -x.keys))
 
-for i in range(min(k, len(numbers))):
+for i in range(k):
     print(numbers[i].keys, end=" ")
