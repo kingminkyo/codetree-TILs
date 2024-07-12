@@ -14,9 +14,9 @@ class Number:
         self.keys = keys
         self.value = value
 
-numbers = []
-for k, v in count.items():
-    numbers.append(Number(k, v))
+numbers = [Number(k, v ) for k, v in count.items():]
+# for k, v in count.items():
+#     numbers.append(Number(k, v))
 
 numbers.sort(key = lambda x: (-x.value, -x.keys))
 
