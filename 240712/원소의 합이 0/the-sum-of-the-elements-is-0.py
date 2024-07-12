@@ -9,10 +9,19 @@ ans = 0
 
 for i in range(n):
     for j in range(n):
-        for k in range(n):
-            for m in range(n):
-                sum_val = A[i] + B[j] + C[k] + D[m]
-                if sum_val == 0:
-                    ans += 1 
+        sum_val = A[i] + B[j]
+        
+        if sum_val in count:
+            count[sum_val] += 1
+        else:
+            count[sum_val] = 1
+
+for i in range(n):
+    for j in range(n):
+        diff = -C[i] - D[j]
+
+        if diff in count:
+            ans += count[diff]
+
 
 print(ans)
