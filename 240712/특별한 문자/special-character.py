@@ -8,7 +8,12 @@ for w in word:
     else:
         count[w] = 1
 
+key = True
 for k, v in count.items():
     if v == 1:
         print(k)
+        key = False
         break
+
+if not key:
+    print(None)
