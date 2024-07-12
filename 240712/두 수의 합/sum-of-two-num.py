@@ -2,11 +2,19 @@ n, k = tuple(map(int, input().split()))
 arr = list(map(int, input().split()))
 
 d = dict()
-d[k] = 0
 
-for i in range(n):
-    for j in range(i+1, n):
-        if arr[i] + arr[j] == k:
-            d[k] += 1
 
-print(d[k])
+ans = 0
+
+for a in arr:
+    diff = k - a 
+
+    if diff in d:
+        ans += d[diff]
+
+    if a in d:
+        d[a] += 1
+    else:
+        d[a] = 1
+
+print (ans)
