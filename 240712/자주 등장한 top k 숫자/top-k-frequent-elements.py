@@ -9,14 +9,16 @@ for a in arr:
     else:
         count[a] = 1
 
+class Number:
+    def __init__(self, keys, value):
+        self.keys = keys
+        self.value = value
 
-new_arr = [
-    [value, key]
-    for key, value in count.items()
-]
+numbers = []
+for k, v in count.items():
+    numbers.append(Number(k, v))
 
-new_arr = sorted(new_arr)
-leng = len(new_arr)
+numbers.sort(key = lambda x: (-x.value, -x.keys))
 
-for i in range(leng-1, leng-k-1, -1):
-    print(new_arr[i][1], end=" ")
+for i in range(k):
+    print(f"{numbers[i].keys}", end=" ")
