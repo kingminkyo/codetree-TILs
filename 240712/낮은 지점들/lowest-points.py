@@ -7,8 +7,8 @@ for _ in range(n):
     if x in count:
         if count[x] > y:
             count[x] = y
-        else:
-            count[x] = y
+    else:
+        count[x] = y
 ans = 0
 for x, y in count.items():
     ans += y
