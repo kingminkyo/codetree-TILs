@@ -1,4 +1,4 @@
-n, m = tuple(map(int, input()))
+n, m = tuple(map(int, input().split()))
 A = [input() for _ in range(n)]
 B = [input() for _ in range(n)]
 
