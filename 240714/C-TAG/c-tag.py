@@ -21,7 +21,7 @@ def check(x, y, z):
     return True
 
 for i in range(m):
-    for j in range(i+1. m):
+    for j in range(i+1, m):
         for k in range(j+1, m):
             if check(i, j, k): ans+= 1
 
