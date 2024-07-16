@@ -10,9 +10,9 @@ for i in range(n):
 
 
     if i >= 2:
-        h1 = heappop(pq)
-        h2 = heappop(pq)
-        h3 = heappop(pq)
+        h1 = hq.heappop(pq)
+        h2 = hq.heappop(pq)
+        h3 = hq.heappop(pq)
         print(h1 * h2 * h3)
 
         hq.heappush(pq, h1)
