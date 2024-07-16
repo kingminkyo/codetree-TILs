@@ -23,4 +23,4 @@ for i in range(n-2, 0, -1):
     sum_val += pq[0]
     # print(pq, avg, sum_val)
 
-print(max_avg)
+print(f"{max_avg:.2f}")
