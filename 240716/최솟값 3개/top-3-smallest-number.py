@@ -10,6 +10,13 @@ for i in range(n):
 
 
     if i >= 2:
-        print(pq[0] * pq[1] * pq[2])    
+        h1 = heappop(pq)
+        h2 = heappop(pq)
+        h3 = heappop(pq)
+        print(h1 * h2 * h3)
+
+        hq.heappush(pq, h1)
+        hq.heappush(pq, h2)
+        hq.heappush(pq, h3)
     else:
         print(-1)
