@@ -44,7 +44,7 @@ def printNode(target):
         print(target.next.data)
 
 # 맨 처음 문자열을 입력 받습니다.
-sInit = input().strip()
+sInit = input()
 
 # 맨 처음 존재하는 노드를 만듭니다.
 cur = Node(sInit)
