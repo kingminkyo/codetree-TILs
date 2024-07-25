@@ -3,8 +3,8 @@ n = int(input())
 paper = []
 
 arr = [
-    [0 for _ in range(50)]
-    for _ in range(50)
+    [0 for _ in range(32)]
+    for _ in range(32)
 ]
 
 for _ in range(n):
@@ -15,8 +15,8 @@ for _ in range(n):
             arr[i][j] = 1
 
 cnt = 0
-for i in range(50):
-    for j in range(50):
+for i in range(32):
+    for j in range(32):
         if arr[i][j] == 1:
             cnt += 1
 print(cnt )
