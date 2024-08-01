@@ -30,7 +30,7 @@ for i in range(1, n):
 for i in range(1, n):
     for j in range(1, n):
         max_arr[i][j] = max(min(max_arr[i-1][j], max_arr[i][j-1]), arr[i][j])
-        min_arr[i][j] = min(min(min_arr[i-1][j], min_arr[i][j-1]), arr[i][j])
+        min_arr[i][j] = min(max(min_arr[i-1][j], min_arr[i][j-1]), arr[i][j])
 
 for i in range(n):
     for j in range(n):
@@ -39,5 +39,12 @@ for i in range(n):
 print(dp[n-1][n-1])
 
 
-# print(max_arr)
-# print(min_arr)
+def print_arr(x):
+    for i in range(n):
+        for j in range(n):
+            print(x[i][j], end=" ")
+        print()
+    print()
+
+# print_arr(max_arr)
+# print_arr(min_arr)
