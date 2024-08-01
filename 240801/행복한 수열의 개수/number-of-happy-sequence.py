@@ -9,9 +9,8 @@ result = 0
 for i in range(n):
     cnt = 1
     for j in range(n-1):
-        if cnt == m:
-            result += 1
-            continue
+
+
         if arr[i][j] == arr[i][j+1]:
             cnt += 1
         else:
@@ -19,14 +18,12 @@ for i in range(n):
         
         if cnt == m:
             result += 1
-            continue
+            break
 
 for i in range(n):
     cnt = 1
     for j in range(n-1):
-        if cnt == m:
-            result += 1
-            continue
+
         if arr[j+1][i] == arr[j][i]:
             cnt += 1
         else:
@@ -34,5 +31,5 @@ for i in range(n):
         
         if cnt == m:
             result += 1
-            continue
+            break
 print(result)
