@@ -49,7 +49,7 @@ for i in range(n):
 
 
 ans = min(ans, dp[n-1][n-1])
-
+print(ans)
 def print_arr(x):
     for i in range(n):
         for j in range(n):
