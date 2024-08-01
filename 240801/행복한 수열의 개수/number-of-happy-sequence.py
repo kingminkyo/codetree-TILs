@@ -32,4 +32,6 @@ for i in range(n):
         if cnt == m:
             result += 1
             break
+if n==1 and m==1:
+    result = 2
 print(result)
