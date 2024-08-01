@@ -48,7 +48,7 @@ for i in range(n):
         dp[i][j] = max_arr[i][j] - min_arr[i][j]
 
 
-ans = min(ans, dp[n-1][n-1])
+ans = max(ans, dp[n-1][n-1])
 print(ans)
 def print_arr(x):
     for i in range(n):
