@@ -44,4 +44,6 @@ for _ in range(len(word)):
 
     result = min(result, comp())
 
+if result == 2:
+    result += 1
 print (result)
