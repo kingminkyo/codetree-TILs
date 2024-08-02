@@ -16,10 +16,12 @@ save = []
 def clockwise(r, c, to):
     
     dxs, dys = [-1, -1, 1, 1], [1, -1, -1, 1]
-    if to == 1:
-        dxs, dys = [-1, -1, 1, 1], [-1, 1, 1,-1]
-
     t_dir = [k, l, k, l]
+    if to == 1:
+        dxs, dys = [-1, -1, 1, 1], [-1, 1, 1, -1]
+        t_dir = [l, k, l, k]
+
+    
     cnt = 0
     x, y = r-1, c-1 
 
