@@ -13,7 +13,7 @@ def print_arr():
     print()
 def rotate(x1, y1, x2, y2):
     
-    temp1 = arr[x2][y1]
+    temp1 = arr[x1][y2]
     temp2 = arr[x2][y2]
     temp3 = arr[x2][y1]
 
@@ -32,7 +32,7 @@ def rotate(x1, y1, x2, y2):
 
     arr[x1+1][y2] = temp1
     arr[x2][y2-1] = temp2
-    arr[x1+1][y1] = temp3
+    arr[x2-1][y1] = temp3
 
 copy = [
     [0 for _ in range(m)]
@@ -70,7 +70,7 @@ for _ in range(q):
 
     rotate(r1, c1, r2, c2)
     # print_arr()
-    # print(copy)
+    
     do_copy()
 
     for i in range(r1, r2+1):
