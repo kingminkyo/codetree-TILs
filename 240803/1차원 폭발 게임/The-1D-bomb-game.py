@@ -29,7 +29,7 @@ while True:
     if key == False:
         break
 
-if len(arr) == 0 or m == 0:
+if len(arr) == 0 or m == 1:
     print(0)
 else:
     print(len(arr))
