@@ -13,12 +13,12 @@ def make_rec(x1, y1, x2, y2):
             result += arr[i][j]
 
             if arr[i][j] < 0:
-                return 0
+                return -1
 
     return result
 
-final = 0 
-rec_size =0
+final = -1
+rec_size = -1
 
 for i in range(n):
     for j in range(m):
