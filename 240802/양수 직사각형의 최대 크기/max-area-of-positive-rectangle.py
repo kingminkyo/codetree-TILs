@@ -12,7 +12,7 @@ def make_rec(x1, y1, x2, y2):
         for j in range(y1, y2+1):
             result += arr[i][j]
 
-            if arr[i][j] < 0:
+            if arr[i][j] <= 0:
                 return -1
 
     return result
@@ -24,7 +24,7 @@ for i in range(n):
     for j in range(m):
         for k in range(i, n):
             for l in range(j, m):
-                if make_rec(i, j, k, l) >= 0:
+                if make_rec(i, j, k, l) > 0:
                     rec_size = (k-i+1) * (l-j+1)
                 if rec_size > final:
                     final = rec_size
