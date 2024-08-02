@@ -32,5 +32,6 @@ while True:
 if len(arr) == 0:
     print(0)
 else:
+    print(len(arr))
     for a in arr:
         print(a)
