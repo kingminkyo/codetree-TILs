@@ -22,7 +22,7 @@ for _ in range(2):
 
     
     arrange()
-    print(block)
+    # print(block)
 
 print(len(block))
 for b in block:
