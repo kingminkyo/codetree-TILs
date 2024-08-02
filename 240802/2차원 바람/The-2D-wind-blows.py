@@ -77,4 +77,5 @@ for _ in range(q):
         for j in range(c1, c2+1):
             comp_switch(i, j)
 
-    print_arr()
+
+print_arr()
