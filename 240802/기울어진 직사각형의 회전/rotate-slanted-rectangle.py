@@ -11,9 +11,14 @@ r, c, k, l, k, l, to = tuple(map(int, input().split()))
 
 save = []
 
-dxs, dys = [-1, -1, 1, 1], [1, -1, -1, 1]
 
-def clockwise(r, c):
+
+def clockwise(r, c, to):
+    
+    dxs, dys = [-1, -1, 1, 1], [1, -1, -1, 1]
+    if to == 1:
+        dxs, dys = [-1, -1, 1, 1], [-1, 1, 1,-1]
+
     t_dir = [k, l, k, l]
     cnt = 0
     x, y = r-1, c-1 
@@ -36,5 +41,5 @@ def print_arr():
         print()
     print()
 
-clockwise(r, c)
+clockwise(r, c, to)
 print_arr()
