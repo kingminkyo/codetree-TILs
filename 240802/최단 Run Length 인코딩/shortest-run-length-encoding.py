@@ -24,8 +24,8 @@ def comp():
             if i == (len(word)-1):
                 final.append(word[i-1])
                 final.append(cnt)
-    print(word)
-    print(final)
+    # print(word)
+    # print(final)
     return len(final)
 
 
