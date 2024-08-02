@@ -24,7 +24,7 @@ for i in range(n):
     for j in range(m):
         for k in range(i, n):
             for l in range(j, m):
-                if make_rec(i, j, k, l) >= 1:
+                if make_rec(i, j, k, l) >= 0:
                     rec_size = (k-i+1) * (l-j+1)
                 if rec_size > final:
                     final = rec_size
