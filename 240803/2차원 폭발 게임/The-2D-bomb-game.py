@@ -81,6 +81,7 @@ for _ in range(k):
 
     rotate()
     arrange()
+    bomb()
     # print_arr()
 
 result = 0
