@@ -60,13 +60,14 @@ def bomb():
                         else:
                             break
                 if cnt >= m:
-                    
+                    key = True
                     for k in range(j, j+cnt):
                         if in_range(k, i):
                             arr[k][i] = 0
                             
 
         arrange()
+        # print_arr()
         if key == False:
             break
         
