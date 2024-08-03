@@ -6,7 +6,7 @@ ans = []
 def check_beautiful():
     cnt = 1 
     for i in range(n-1):
-        if arr[i] == ans[i+1]:
+        if ans[i] == ans[i+1]:
             cnt += 1
         else:
             if cnt % ans[i] == 0:
