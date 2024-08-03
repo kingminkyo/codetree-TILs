@@ -26,11 +26,12 @@ def print_ans():
 
 
 
-
+result = 0 
 def choose(num):
+    global result 
     if num ==  n:
         if check_beautiful():
-            print_ans()
+            result += 1
 
         return
 
@@ -40,3 +41,4 @@ def choose(num):
         ans.pop()
 
 choose(0)
+print(result)
