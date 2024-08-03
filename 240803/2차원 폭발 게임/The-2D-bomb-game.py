@@ -80,5 +80,7 @@ for i in range(n):
     for j in range(n):
         if arr[i][j] != 0:
             result += 1 
-
-print(result)
+if n == 1:
+    print(0)
+else:
+    print(result)
