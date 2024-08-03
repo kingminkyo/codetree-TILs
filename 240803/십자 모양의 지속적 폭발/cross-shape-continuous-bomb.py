@@ -61,4 +61,5 @@ for _ in range(m):
     num = int(input())
     select(num)
     arrange()
-    print_arr()
+
+print_arr()
