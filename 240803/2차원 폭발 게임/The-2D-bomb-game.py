@@ -91,7 +91,7 @@ for i in range(n):
     for j in range(n):
         if arr[i][j] != 0:
             result += 1 
-if n == 1:
+if n == 1 or m == 1:
     if n >= m:
         print(0)
     else:
