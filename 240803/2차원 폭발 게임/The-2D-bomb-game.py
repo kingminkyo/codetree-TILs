@@ -1,0 +1,77 @@
+n, m, k = tuple(map(int, input().split()))
+
+arr = [
+    list(map(int, input().split()))
+    for _ in range(n)
+]
+
+temp_arr = [
+    [0 for _ in range(n)]
+    for _ in range(n)
+]
+
+def rotate():
+    for i in range(n):
+        for j in range(n):
+            temp_arr[i][j] = arr[n - j - 1][i]
+
+    for i in range(n):
+        for j in range(n):
+            arr[i][j] = temp_arr[i][j]
+
+def print_arr():
+    for i in range(n):
+        for j in range(n):
+            print(arr[i][j], end=" ")
+        print()
+    print()
+
+
+def bomb():
+    for i in range(n):
+        cnt = 1
+        for j in range(n-1):
+            if arr[j][i] == arr[j+1][i]:
+                for k in range(j+1, n):
+                    if arr[j][i] == arr[k][i]:
+                        cnt += 1
+                    else:
+                        break
+            if cnt >= m:
+                for k in range(j, j+k):
+                    arr[k][i] = 0
+
+def arrange():
+    for i in range(n):
+        temp = [0 for _ in range(n)]
+        cnt = 0
+            
+        for j in range(n-1, -1, -1):
+            if arr[j][i] != 0:
+                temp[cnt] = arr[j][i]
+                cnt += 1 
+        cnt = 0
+
+        for j in range(n-1, -1, -1):
+            arr[j][i] = temp[cnt]
+            cnt += 1 
+        
+
+            
+
+    
+
+for _ in range(k):
+    bomb()
+    arrange()
+    rotate()
+    arrange()
+
+result = 0
+
+for i in range(n):
+    for j in range(n):
+        if arr[i][j] != 0:
+            result += 1 
+
+print(result)
