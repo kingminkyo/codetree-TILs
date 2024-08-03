@@ -74,9 +74,12 @@ for _ in range(k):
     
     # print_arr()
     arrange()
+    # print_arr()
+    bomb()
     rotate()
     arrange()
     # print_arr()
+    bomb()
 
 result = 0
 
