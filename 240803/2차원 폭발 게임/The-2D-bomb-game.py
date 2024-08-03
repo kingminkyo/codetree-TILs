@@ -30,6 +30,10 @@ def in_range(x, y):
     return x>=0 and x<n and y>=0 and y<n 
 
 def bomb():
+
+
+
+
     for i in range(n):
         cnt = 1
         for j in range(n-1):
@@ -81,6 +85,10 @@ for i in range(n):
         if arr[i][j] != 0:
             result += 1 
 if n == 1:
-    print(0)
+    if n >= m:
+        print(0)
+    else:
+        print(1)
+
 else:
     print(result)
