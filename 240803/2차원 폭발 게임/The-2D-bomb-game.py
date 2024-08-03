@@ -46,7 +46,8 @@ def arrange():
 
 
 def bomb():
-
+    if m == 1:
+        return 
     while True:
         key = False
         for i in range(n):
@@ -75,7 +76,7 @@ def bomb():
 
             
 
-    
+
 
 for _ in range(k):
     bomb() 
