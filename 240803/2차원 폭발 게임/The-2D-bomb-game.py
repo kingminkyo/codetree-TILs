@@ -29,26 +29,6 @@ def print_arr():
 def in_range(x, y):
     return x>=0 and x<n and y>=0 and y<n 
 
-def bomb():
-
-
-
-
-    for i in range(n):
-        cnt = 1
-        for j in range(n-1):
-            cnt = 1
-            if arr[j][i] == arr[j+1][i]:
-                for k in range(j+1, n):
-                    if arr[j][i] == arr[k][i]:
-                        cnt += 1
-                    else:
-                        break
-            if cnt >= m:
-                for k in range(j, j+cnt):
-                    if in_range(k, i):
-                        arr[k][i] = 0
-
 def arrange():
     for i in range(n):
         temp = [0 for _ in range(n)]
@@ -63,6 +43,33 @@ def arrange():
         for j in range(n-1, -1, -1):
             arr[j][i] = temp[cnt]
             cnt += 1 
+
+
+def bomb():
+
+    while True:
+        key = False
+        for i in range(n):
+            cnt = 1
+            for j in range(n-1):
+                cnt = 1
+                if arr[j][i] == arr[j+1][i] and arr[j][i] != 0:
+                    for k in range(j+1, n):
+                        if arr[j][i] == arr[k][i]:
+                            cnt += 1
+                        else:
+                            break
+                if cnt >= m:
+                    
+                    for k in range(j, j+cnt):
+                        if in_range(k, i):
+                            arr[k][i] = 0
+                            
+
+        arrange()
+        if key == False:
+            break
+        
         
 
             
@@ -70,16 +77,11 @@ def arrange():
     
 
 for _ in range(k):
-    bomb()
-    
-    # print_arr()
-    arrange()
-    # print_arr()
-    bomb()
+    bomb() 
+
     rotate()
     arrange()
     # print_arr()
-    bomb()
 
 result = 0
 
