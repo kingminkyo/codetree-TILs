@@ -48,7 +48,7 @@ def choose(num):
     global result 
 
     if num == n:
-        print_ans()
+        # print_ans()
         result = max(result, max_lines())
         # print(result)
         return 
