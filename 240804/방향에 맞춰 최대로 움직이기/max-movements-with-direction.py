@@ -29,8 +29,8 @@ def find_path(x, y, cnt):
         nx, ny = x + dxs[d] * i, y + dys[d] * i
 
         if in_range(nx, ny) and arr[nx][ny] > arr[x][y]:
-            print(arr[nx][ny])
-            # find_path(nx, ny, cnt+1)
+            # print(arr[nx][ny])
+            find_path(nx, ny, cnt+1)
 r, c = tuple(map(int, input().split()))
 
 find_path(r-1, c-1, 0)
