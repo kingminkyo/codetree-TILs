@@ -13,7 +13,7 @@ def choose(num):
         return
     
     for i in range(1, k+1):
-        if num >= 2 and i == ans[len(ans)-2] and i == ans[len(ans)-3]:
+        if num >= 2 and i == ans[len(ans)-1] and i == ans[len(ans)-2]:
             continue
         else:
             ans.append(i)   
