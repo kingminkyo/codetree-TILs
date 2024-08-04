@@ -1,7 +1,7 @@
 n = int(input())
 lines = []
 
-for _ in range(3):
+for _ in range(n):
     a, b = tuple(map(int, input().split()))
     lines.append((a, b))
 
