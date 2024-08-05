@@ -59,5 +59,9 @@ def choose(num, cnt):
 
     choose(num+1, cnt)
 
+
 choose(0, 0)
-print(result)
+if count < 3:
+    print(-1)
+else:
+    print(result)
