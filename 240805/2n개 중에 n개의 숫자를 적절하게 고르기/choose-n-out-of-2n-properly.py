@@ -50,3 +50,4 @@ def choose(num, cnt):
     choose(num+1, cnt)
 
 choose(0, 0)
+print(result)
