@@ -50,6 +50,7 @@ for i in range(n):
         max_num = max(max_num, arr[i][j])
 
 result = 0
+result_k = 0 
 for k in range(1, max_num+1):
     count = 0
     reset_visited()
@@ -71,5 +72,7 @@ for k in range(1, max_num+1):
     # print("k는 ", k, "zone은 ", count )
     # print_visited()
     result = max(result, count)
+    if count > result:
+        result_k = k
 
-print(result )
+print(result_k, result )
