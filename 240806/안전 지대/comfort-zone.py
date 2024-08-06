@@ -50,7 +50,7 @@ for i in range(n):
         max_num = max(max_num, arr[i][j])
 
 result = 0
-result_k = 0 
+result_k = 1
 for k in range(1, max_num+1):
     count = 0
     reset_visited()
