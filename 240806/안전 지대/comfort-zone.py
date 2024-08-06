@@ -48,6 +48,7 @@ def print_visited():
 for i in range(n):
     for j in range(m):
         max_num = max(max_num, arr[i][j])
+print(max_num)
 
 result = 0
 result_k = 1
@@ -61,7 +62,7 @@ for k in range(1, max_num+1):
                 visited[i][j] = 1
 
 
-    # print_visited()
+    print_visited()
 
     for i in range(n):
         for j in range(m):
@@ -69,10 +70,11 @@ for k in range(1, max_num+1):
                 dfs(i, j, k)
                 count += 1 
 
-    # print("k는 ", k, "zone은 ", count )
+    # print("k는 ", k, "zone은 ", count , result)
     # print_visited()
-    result = max(result, count)
+    
     if count > result:
+        result = count
         result_k = k
 
 print(result_k, result )
