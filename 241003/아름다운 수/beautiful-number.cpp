@@ -12,7 +12,7 @@ void printArr(){
 }
 
 bool isBeautiful(){
-    for (int i=0; i<arr.size(); i += arr[i]){
+    for (int i=0; i<arr.size(); i+=arr[i]){
 
         // if(i + arr[i] - 1 >= n)
         //     return false;
@@ -27,7 +27,7 @@ bool isBeautiful(){
 
     }
 
-    printArr();
+    // printArr();
     return true;
 }
 
