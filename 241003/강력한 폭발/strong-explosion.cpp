@@ -26,7 +26,7 @@ void Bomb(int x, int y, int b_type){
 
     for (int i = 0; i < 5; i++){
         int dx, dy;
-        tie(dx, dy) = bomb_shape[b_type][i];
+        tie(dx, dy) = bomb_shape[b_type-1][i];
 
         int nx = x+dx, ny = y+dy;
         if(inRange(nx, ny))
@@ -61,7 +61,7 @@ void choose(int cnt){
         return;
     }
 
-    for(int i = 0; i<3; i++){
+    for(int i = 1; i<=3; i++){
         int x, y;
         tie(x, y) = bomb_pos[cnt];
 
