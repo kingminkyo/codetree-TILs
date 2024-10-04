@@ -12,20 +12,20 @@ unordered_map<int, int> count;
 int main() {
     // 여기에 코드를 작성해주세요.
 
-    cin >> n >> k; 
+    cin >> n >> k;
 
-    for(int i = 0; i < n; i++)
+    for(int i = 0; i < n; i++){
         cin >> arr[i];
+    }
 
     int ans = 0;
 
     for(int i = 0; i < n; i++){
         int diff = k - arr[i];
+
         ans += count[diff];
 
         count[arr[i]]++;
     }
-
     cout << ans;
-    return 0;
 }
