@@ -100,8 +100,7 @@ int main() {
     
 
     for (int time = 0; time < t; time++){
-        marbles.clear(); 
-        
+        vector<Marble> marbles;         
         cin >> n >> m;
 
         for(int i = 1; i <= m; i++){
