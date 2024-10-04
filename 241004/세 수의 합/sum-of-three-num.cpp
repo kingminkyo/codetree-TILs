@@ -24,6 +24,12 @@ int main() {
         
         freq[arr[i]]--;
 
+        // 1은 2 
+        // 2는 1 
+        // 4는 1
+        // -1은 1 
+        
+
         for(int j = 0; j < i; j++){
             if(freq[k - arr[i] - arr[j]] > 0){
                 ans += freq[k - arr[i] - arr[j]];
