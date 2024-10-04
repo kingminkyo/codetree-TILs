@@ -26,7 +26,7 @@ int main() {
     for (int i = 1; i <= m; i++){
         cin >> s;
 
-        if (s >= "0" && s <= "9"){
+        if (s[0] >= '0' && s[0] <= '9'){
             cout << map2[stoi(s)] << endl;
         }
         else{
