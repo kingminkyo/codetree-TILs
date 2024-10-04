@@ -49,7 +49,7 @@ void move(int x, int y){
     pair<int, int> np = find_pos(x, y);
     int nx = np.first, ny = np.second;
 
-    next_count[x][y] += 1; 
+    next_count[nx][ny]++; 
 }
 
 void move_all(){
@@ -97,6 +97,7 @@ int main() {
     for (int i = 0; i<t; i++){
         move_all();
     }
+
     int result = 0;
 
     for (int i = 0; i<n; i++)
