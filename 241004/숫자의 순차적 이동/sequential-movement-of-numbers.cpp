@@ -73,6 +73,7 @@ int main() {
     
     // print_grid();
 
+    for(int t = 0; t < m; t++){
     for(int num = 1; num<=(n*n); num++){
         bool key = true;
 
@@ -85,6 +86,7 @@ int main() {
             }
         }
 
+    }
     }
 
     for(int i = 0; i < n; i++){
