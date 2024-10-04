@@ -17,7 +17,7 @@ int main() {
         if (point.find(x) == point.end() )
             point[x] = y;
         else
-            point[x] = min[point[x], y];
+            point[x] = min(point[x], y);
     }
 
     int ans = 0;
