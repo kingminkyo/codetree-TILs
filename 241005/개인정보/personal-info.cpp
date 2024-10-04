@@ -40,6 +40,8 @@ int main() {
         students[i] = Student(name, height, weight);
     }
 
+    cout.precision(1); 
+    
     sort(students, students + MAX_N, cmp_name);
 
     cout << "name" << endl;
