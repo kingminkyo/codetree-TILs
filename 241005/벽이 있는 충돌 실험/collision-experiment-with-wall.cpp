@@ -98,23 +98,25 @@ int main() {
 
     cin >> t;
     
-    cin >> n >> m;
 
-    for(int i = 1; i <= m; i++){
-        int x, y; char d;
-        cin >> x >> y >> d;
-        marbles.push_back(make_tuple(x-1, y-1, d_dir[d]));
+    for (int time = 0; time < t; time++){
+        cin >> n >> m;
 
+        for(int i = 1; i <= m; i++){
+            int x, y; char d;
+            cin >> x >> y >> d;
+            marbles.push_back(make_tuple(x-1, y-1, d_dir[d]));
+
+        }
+
+        for(int i = 0; i < 2 * n; i++){
+            simulate();
+        }
+
+        cout << (int)marbles.size() << endl; 
+        
+    
     }
-
-    for(int i = 0; i < 2 * n; i++){
-        simulate();
-    }
-
-    cout << (int)marbles.size(); 
-    
-    
-    
     
     return 0;
 
