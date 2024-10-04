@@ -14,7 +14,7 @@ int find(int target){
     while(left <= right){
         int mid = (left + right) / 2;
         if(arr[mid] == target)
-            return mid;
+            return mid+1;
         
         if(arr[mid] > target)
             right = mid - 1;
