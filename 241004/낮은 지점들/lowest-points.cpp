@@ -3,33 +3,29 @@
 
 using namespace std;
 
-
-
 int main() {
-    // 여기에 코드를 작성해주세요.
     int n;
     cin >> n;
 
-    unordered_map<int, int> point; 
+    unordered_map<int, int> point;  // x좌표를 키로, y값을 저장
 
-    for (int i = 0; i < n; i++){
+    for (int i = 0; i < n; i++) {
         int x, y;
         cin >> x >> y;
 
-        // if (point.find(x) == point.end())
-        //     point[x] = y;
-        // else if(point.find(x) != point.end() || point[x] > y)
-        //     point[x] = y;
-
-        if (point.find(x) == point.end() || point[x] > y) 
+        // 해당 x좌표에 y값이 없으면 추가, 있으면 더 작은 값으로 갱신
+        if (point.find(x) == point.end() || point[x] > y) {
             point[x] = y;
+        }
     }
-    
-    int ans = 0; 
-    for (unordered_map<int, int>::iterator it = point.begin();
-         it != point.end(); it++){
-            ans += it->second;
-         }
-    cout << ans; 
+
+    int ans = 0;
+    // 남아있는 y값의 합을 구함
+    for (auto it = point.begin(); it != point.end(); it++) {
+        ans += it->second;
+    }
+
+    cout << ans << endl;
+
     return 0;
 }
