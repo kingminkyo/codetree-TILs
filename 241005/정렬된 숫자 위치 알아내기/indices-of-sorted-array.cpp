@@ -20,7 +20,7 @@ int n;
 int num;
 
 bool comp(Number a, Number b){
-    if(a.number != b.number; )
+    if(a.number != b.number)
         return a.number < b.number;
     return a.index < b.index; 
 }
