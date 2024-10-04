@@ -25,10 +25,10 @@ int ucl_dist(pair<int, int> p1, pair<int, int> p2){
 
 
 int calc(){
-    int result = 10000; 
+    int result = 0; 
     for(int i = 0; i < m; i++){
         for(int j = i+1; j < m ; j++){
-            result = min(result, ucl_dist(selected[i], selected[j]));
+            result = max(result, ucl_dist(selected[i], selected[j]));
         }
     }
     return result; 
