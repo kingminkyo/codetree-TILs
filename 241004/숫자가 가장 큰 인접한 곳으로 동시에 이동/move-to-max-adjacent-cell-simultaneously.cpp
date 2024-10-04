@@ -26,8 +26,8 @@ void print_count(){
 }
 
 pair<int, int> find_pos(int x, int y){
-    int dx[DIR_NUM] = {0, 1, 0, -1};
-    int dy[DIR_NUM] = {1, 0, -1, 0};
+    int dx[DIR_NUM] = {-1, 1, 0, 0};
+    int dy[DIR_NUM] = {0, 0, -1, 1};
 
     int num = 0; 
     pair<int, int> pos; 
