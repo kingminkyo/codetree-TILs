@@ -1,40 +1,45 @@
 #include <iostream>
+#include <algorithm> // min, max 함수 사용
 using namespace std;
 
-// 이진 탐색을 통해 target까지 도달할 때의 횟수를 반환
-long long binary_search(long long L, long long R, long long target) {
-    long long time = 0;
-    
-    while (L <= R) {
-        time += 1;
-        long long mid = (L + R) / 2;  // 중간 값 계산
-        if (mid == target) {
-            return time;  // 타겟을 찾으면 해당 시간을 반환
-        } else if (mid > target) {
-            R = mid - 1;
-        } else {
-            L = mid + 1;
+pair<int, int> game_duration(int m, int a, int b) {
+    int min_turns = 1e9; // 최소 횟수는 아주 큰 값으로 초기화
+    int max_turns = 0;   // 최대 횟수는 0으로 초기화
+
+    // a부터 b까지의 모든 숫자에 대해 이분 탐색을 수행
+    for (int num = a; num <= b; ++num) {
+        int turns = 0;
+        int left = 1, right = m;
+
+        // 이분 탐색을 진행
+        while (left <= right) {
+            int mid = (left + right) / 2;
+            turns += 1;
+
+            if (mid == num) {
+                break;  // 숫자를 찾았을 때
+            } else if (mid < num) {
+                left = mid + 1;  // num이 더 크면 오른쪽 탐색
+            } else {
+                right = mid - 1; // num이 더 작으면 왼쪽 탐색
+            }
         }
+
+        // 최소 횟수와 최대 횟수를 업데이트
+        min_turns = min(min_turns, turns);
+        max_turns = max(max_turns, turns);
     }
-    
-    return time;  // 정상적으로는 이곳에 도달하지 않음
+
+    return {min_turns, max_turns};
 }
 
 int main() {
-    long long m;
+    int m, a, b;
     cin >> m;
-
-    long long a, b;
     cin >> a >> b;
 
-    // 최소 탐색 시간: 중앙값에 가까운 값을 선택할 때
-    long long min_time = binary_search(1, m, (a + b) / 2);
-
-    // 최대 탐색 시간: 범위의 양 끝을 선택할 때
-    long long max_time = max(binary_search(1, m, a), binary_search(1, m, b));
-
-    // 결과 출력
-    cout << min_time << " " << max_time << endl;
+    pair<int, int> result = game_duration(m, a, b);
+    cout << result.first << " " << result.second << endl;
 
     return 0;
 }
