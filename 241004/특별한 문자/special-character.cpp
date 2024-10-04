@@ -25,7 +25,7 @@ int main() {
     if (!key)
         cout << "None"; 
 
-    }
+    
     
 
     return 0;
