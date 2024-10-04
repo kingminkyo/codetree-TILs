@@ -20,6 +20,7 @@ int main() {
     int ans = 0;
 
     for(int i = 0; i < n; i++) {
+        freq[arr[i]]--;
 
         for(int j = 0; j < i; j++) {
             if(freq[k - arr[i] - arr[j]] > 0) {
@@ -28,7 +29,7 @@ int main() {
         }
 
         // freq 감소는 여기에서 수행 (탐색 후)
-        freq[arr[i]]--;
+        
     }
 
     cout << ans << endl;
