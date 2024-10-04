@@ -16,7 +16,7 @@ int main() {
         int x, y;
         cin >> x >> y;
 
-        if (!point[x])
+        if (point.find(x) == point.end())
             point[x] = y;
         else if(point[x] > y)
             point[x] = y;
