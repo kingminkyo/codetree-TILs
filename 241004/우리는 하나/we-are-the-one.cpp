@@ -30,6 +30,9 @@ void reset_visited(){
 }
 
 void vector_to_q(){
+    while (!q.empty()) {  // 큐를 초기화
+        q.pop();
+    }
     for (auto s : selected){
         q.push(s);
     }
@@ -44,18 +47,11 @@ bool can_go(int x, int y, int h1, int h2){
     if (visited[x][y] == true)
         return false;
     
-    if (diff >= u && diff <= d)
+    // 여기서 높이 차이가 u보다 작고 d보다 크지 않으면 true
+    if (diff <= u && diff >= d)
         return true;
     
     return false;
-}
-
-
-void print_selected(){
-    for(auto s : selected){
-        cout << s.first << " " << s.second ;
-    cout << endl; 
-    }
 }
 
 int count_visited(){
@@ -67,7 +63,6 @@ int count_visited(){
         }
     }
     return count; 
-
 }
 
 void bfs(){
@@ -89,33 +84,17 @@ void bfs(){
                 visited[nx][ny] = true;
             }
         }
-
-
     }
 }
-void print_visited(){
-    for (int i = 0; i < n; i++){
-        for (int j = 0; j < n; j++){
-            cout << visited[i][j] << " ";
-        }
-        cout << endl;
-    }
-    cout << endl; 
-}
 
-int result = 0; 
+int result = 0;  // result 초기화
 
 void choose(int idx, int cnt){
     if (cnt == k){
         reset_visited();
         vector_to_q();
         bfs();
-        // print_selected();
-        // print_visited();
-        
         result = max(result, count_visited());
-
-        // cout << result << endl; 
         return;
     }
 
@@ -127,14 +106,9 @@ void choose(int idx, int cnt){
     selected.pop_back();
 
     choose(idx+1, cnt);
-
 }
 
-
-
 int main() {
-    // 여기에 코드를 작성해주세요.
-
     cin >> n >> k >> u >> d;
 
     for(int i = 0; i < n; i++){
