@@ -51,12 +51,12 @@ void change(int x, int y){
     pair<int, int> np = find_max(x, y);
     
     int nx = np.first, ny = np.second;
-    cout << nx << " " << ny << endl << endl;
+    // cout << nx << " " << ny << endl << endl;
     int temp = grid[nx][ny];
     grid[nx][ny] = grid[x][y];
     grid[x][y] = temp;
 
-    print_grid();
+    // print_grid();
 
 
 }
