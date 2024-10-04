@@ -68,18 +68,19 @@ def check_twin():
 
     dxs, dys = [1, 0], [0, 1]
 
-
+    # print("트윈")
     for i in range(n):
         for j in range(n):
             for dx, dy in zip(dxs, dys):
                 nx, ny = i+dx, j+dy
 
                 if in_range(nx, ny) and copy_arr[i][j] == copy_arr[nx][ny]:
-                    cnt += 1 
-
-
-
-
+                    if copy_arr[i][j] != 0:
+                        cnt += 1 
+                    
+                    # print(i, j, nx, ny)
+                    
+    # print(cnt, "next")
     return cnt 
 
 result = 0 
@@ -91,4 +92,4 @@ for i in range(n):
         result = max(check_twin(), result)
 
 
-print(int(result/2))
+print(result)
