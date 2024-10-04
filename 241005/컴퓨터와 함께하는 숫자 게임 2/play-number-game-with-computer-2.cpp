@@ -1,46 +1,40 @@
 #include <iostream>
 using namespace std;
 
-long long m; 
-
-// target을 맞출 때까지의 이진 탐색 횟수를 반환
-long long binary_search(long long target){
-    long long left = 1; // 1부터 시작
-    long long right = m; // m까지
+// 이진 탐색을 통해 target까지 도달할 때의 횟수를 반환
+long long binary_search(long long L, long long R, long long target) {
     long long time = 0;
-
-    while(left <= right){
+    
+    while (L <= R) {
         time += 1;
-        long long mid = left + (right - left) / 2;
-
+        long long mid = (L + R) / 2;  // 중간 값 계산
         if (mid == target) {
-            return time;  // 정답을 맞췄을 때 시간을 반환
+            return time;  // 타겟을 찾으면 해당 시간을 반환
+        } else if (mid > target) {
+            R = mid - 1;
+        } else {
+            L = mid + 1;
         }
-        if (mid > target)
-            right = mid - 1;
-        else
-            left = mid + 1;
     }
-    return time;  // 이론적으로는 여기까지 오지 않음
+    
+    return time;  // 정상적으로는 이곳에 도달하지 않음
 }
 
 int main() {
-    // 입력
-    cin >> m; 
+    long long m;
+    cin >> m;
 
-    int a, b;
+    long long a, b;
     cin >> a >> b;
 
-    long long max_t = 0;
-    long long min_t = 100000000; // log2(m)으로 충분함
+    // 최소 탐색 시간: 중앙값에 가까운 값을 선택할 때
+    long long min_time = binary_search(1, m, (a + b) / 2);
 
-    for(long long i = a ; i <= b ; i++){
-        long long time = binary_search(i);
-        max_t = max(max_t, time);
-        min_t = min(min_t, time);
-    }
+    // 최대 탐색 시간: 범위의 양 끝을 선택할 때
+    long long max_time = max(binary_search(1, m, a), binary_search(1, m, b));
 
-    cout << min_t << " " << max_t << endl;
+    // 결과 출력
+    cout << min_time << " " << max_time << endl;
 
     return 0;
 }
