@@ -6,15 +6,15 @@ using namespace std;
 vector<long long> arr; 
 long long m; 
 
-int binary_search(int target){
-    int left = 0;
-    int right = m-1;
+long long binary_search(long long target){
+    long long left = 0;
+    long long right = m-1;
 
-    int time = 0;
+    long long time = 0;
 
     while(left <= right){
         time += 1;
-        int mid = (left + right) / 2;
+        long long mid = (left + right) / 2;
 
         if (arr[mid] == target)
             return time;
@@ -41,10 +41,10 @@ int main() {
     int a, b;
     cin >> a >> b;
 
-    int max_t = 0;
-    int min_t = 1000000; 
+    long long max_t = 0;
+    long long min_t = 1000000; 
     for(long long i = a ; i <= b ; i++){
-        int time = binary_search(i);
+        long long time = binary_search(i);
         max_t = max(max_t, time);
         min_t = min(min_t, time);
     }
