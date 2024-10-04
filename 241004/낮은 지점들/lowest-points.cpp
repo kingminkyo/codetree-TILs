@@ -20,7 +20,7 @@ int main() {
             point[x] = min(point[x], y);
     }
 
-    int ans = 0;
+    long long ans = 0;
     // 남아있는 y값의 합을 구함
     for (auto it = point.begin(); it != point.end(); it++) {
         ans += it->second;
