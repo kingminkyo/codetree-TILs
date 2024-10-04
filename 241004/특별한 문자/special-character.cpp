@@ -21,7 +21,7 @@ int main() {
             key = true;
             break;
         }
-
+    }
     if (!key)
         cout << "None"; 
 
