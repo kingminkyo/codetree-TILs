@@ -20,21 +20,18 @@ int main() {
 
     for(int i = 0; i < n; i++){
         cin >> arr[i];
-        freq[arr[i]] += 1;
+        freq[arr[i]]++;
     }
 
-    for(unordered_map<int, int>::iterator it = freq.begin(); it != freq.end(); it++){
+    for(unordered_map<int,int>::iterator it = freq.begin(); it != freq.end(); it++){
         v.push_back(make_pair(it->second, it->first));
     }
 
-    sort(v.begin(), v.end());
+    sort(v.begin(), v.end(), greater<pair<int, int>>());
 
     for(int i = 0; i < k; i++){
-        cout << v[i].second << " "; 
+        cout << v[i].second << " " ;
     }
-
-    // for(int i = (int)v.size() - 1; i >= (int)v.size() - k; i--)
-    // cout << v[i].second << " ";
 
 
 
