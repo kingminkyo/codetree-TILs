@@ -7,38 +7,31 @@ using namespace std;
 
 int n, k;
 int arr[MAX_N];
-unordered_map<int, int> freq; 
+unordered_map<int, int> freq;
 
 int main() {
-    // 여기에 코드를 작성해주세요.
-    cin >> n >> k ;
+    cin >> n >> k;
 
-    for(int i = 0; i < n; i++){
+    for(int i = 0; i < n; i++) {
         cin >> arr[i];
-        freq[arr[i]]++; 
+        freq[arr[i]]++;
     }
 
-    int ans = 0; 
+    int ans = 0;
 
-    for(int i = 0; i < n; i++){
-        
-        freq[arr[i]]--;
+    for(int i = 0; i < n; i++) {
 
-        // 1은 2 
-        // 2는 1 
-        // 4는 1
-        // -1은 1 
-        
-
-        for(int j = 0; j < i; j++){
-            if(freq[k - arr[i] - arr[j]] > 0){
+        for(int j = 0; j < i; j++) {
+            if(freq[k - arr[i] - arr[j]] > 0) {
                 ans += freq[k - arr[i] - arr[j]];
             }
         }
 
+        // freq 감소는 여기에서 수행 (탐색 후)
+        freq[arr[i]]--;
     }
 
-    cout << ans; 
+    cout << ans << endl;
 
     return 0;
 }
