@@ -14,9 +14,10 @@ int main() {
         cin >> x >> y;
 
         // 해당 x좌표에 y값이 없으면 추가, 있으면 더 작은 값으로 갱신
-        if (point.find(x) == point.end() || point[x] > y) {
+        if (point.find(x) == point.end() )
             point[x] = y;
-        }
+        else
+            point[x] = min[point[x], y];
     }
 
     int ans = 0;
