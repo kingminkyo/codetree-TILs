@@ -59,7 +59,7 @@ def drop():
             copy_arr[num][j] = t
             num -= 1 
 
-    print_arr()
+    # print_arr()
 
 
 
@@ -91,4 +91,4 @@ for i in range(n):
         result = max(check_twin(), result)
 
 
-print(result/2)
+print(int(result/2))
