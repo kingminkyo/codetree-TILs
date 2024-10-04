@@ -14,7 +14,7 @@ int next_count[MAX_N][MAX_N];
 
 
 bool in_range(int x, int y){
-    return x>=0 && x<n && y>0 && y<n; 
+    return x>=0 && x<n && y>=0 && y<n; 
 }
 
 void print_count(){
