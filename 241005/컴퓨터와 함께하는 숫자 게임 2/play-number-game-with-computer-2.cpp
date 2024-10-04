@@ -32,7 +32,7 @@ int main() {
     cin >> a >> b;
 
     long long max_t = 0;
-    long long min_t = 100; // log2(m)으로 충분함
+    long long min_t = 100000000; // log2(m)으로 충분함
 
     for(long long i = a ; i <= b ; i++){
         long long time = binary_search(i);
